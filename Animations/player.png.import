@@ -7,7 +7,10 @@ path="res://.import/player.png-8848de7494d5aff04ef2ecffcf51119a.stex"
 [deps]
 
 source_file="res://Animations/player.png"
+source_md5="77d96f87db9e251eb9914da7c8c66125"
+
 dest_files=[ "res://.import/player.png-8848de7494d5aff04ef2ecffcf51119a.stex" ]
+dest_md5="369ae1bb4885aeafe4e7a8c114e72156"
 
 [params]
 

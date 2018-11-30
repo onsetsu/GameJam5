@@ -9,6 +9,9 @@ func _ready():
     # Initialization here
     pass
 
+func ready(host):
+    pass
+
 func enter(host):
     pass
 

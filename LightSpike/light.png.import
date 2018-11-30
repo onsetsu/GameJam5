@@ -7,7 +7,10 @@ path="res://.import/light.png-f5e9c7274c1cf42912cd17359064f638.stex"
 [deps]
 
 source_file="res://LightSpike/light.png"
+source_md5="d36597a1d2ddc06b8d0d22650a176149"
+
 dest_files=[ "res://.import/light.png-f5e9c7274c1cf42912cd17359064f638.stex" ]
+dest_md5="4358f9620206dfaf70c1c9c703c7cbc0"
 
 [params]
 

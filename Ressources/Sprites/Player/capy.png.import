@@ -7,7 +7,10 @@ path="res://.import/capy.png-b0fd22898b5ed7d9c8949a0120f1bfbd.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/capy.png"
+source_md5="8e91eb8e9542c18c10de372d2a45ac3b"
+
 dest_files=[ "res://.import/capy.png-b0fd22898b5ed7d9c8949a0120f1bfbd.stex" ]
+dest_md5="f72bbf566d83a90545abbd3daa834945"
 
 [params]
 

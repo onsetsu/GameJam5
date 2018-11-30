@@ -7,7 +7,10 @@ path="res://.import/Taschenlampe.png-f4dc5cfb6b67dc56be2111426afcd882.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/Taschenlampe.png"
+source_md5="a5c93abb64a502d505456740b1c464dd"
+
 dest_files=[ "res://.import/Taschenlampe.png-f4dc5cfb6b67dc56be2111426afcd882.stex" ]
+dest_md5="74ae7395d78c8337ce8bbc7e8d2699ae"
 
 [params]
 
