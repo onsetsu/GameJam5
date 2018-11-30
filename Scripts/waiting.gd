@@ -1,8 +1,9 @@
 extends Node
 
-var speed_modifier = 1.0
+var speed_modifier = 0
 
-var target_pos = Vector2(0,0)
+var time_to_normalize = 5
+var current_time = 0
 
 func _ready():
     pass
@@ -14,11 +15,12 @@ func enter(host):
     pass
 
 func update(host, delta):
-    host.navigate_to_point(target_pos)
+    current_time += delta
     
     # TODO: check for environment
-    if (target_pos - host.position).length() < 20:
-        return 'waiting'
+    if current_time > time_to_normalize:
+        current_time = 0
+        return 'idle'
     
 func exit(host):
     pass

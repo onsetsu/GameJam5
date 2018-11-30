@@ -1,5 +1,7 @@
 extends Node
 
+var speed_modifier = 0.8
+
 var idle_path
 export var idle_path_time = 4
 var idle_path_index = 0
@@ -25,10 +27,6 @@ func update(host, delta):
     host.navigate_to_point(target_pos)
     if (host.position - target_pos).length() < 10:
         next_curve_point()
-    
-    # TODO: check for environment
-    if host.LEVEL.sound_emitted:
-        return 'searching'
     
 func exit(host):
     pass
