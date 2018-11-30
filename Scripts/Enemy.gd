@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 # class member variables go here, for example:
 # var a = 2
@@ -7,7 +7,7 @@ extends Node2D
 func _ready():
     # Called every time the node is added to the scene.
     # Initialization here
-    pass
+    print('enemy test')
 
 #func _process(delta):
 #    # Called every frame. Delta is time since last frame.
