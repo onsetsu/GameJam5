@@ -1,0 +1,313 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="InnnerWall" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 110, 110 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="InnnerWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InnnerWall/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="InnnerWall" index="1"]
+
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="WallTop" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 110, 30 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallTop" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallTop" index="1"]
+
+position = Vector2( 0, 5.33333 )
+scale = Vector2( 1, 0.833333 )
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="WallBottom" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 110, 190 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallBottom" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallBottom" index="1"]
+
+position = Vector2( 0, -5.33333 )
+scale = Vector2( 1, 0.833333 )
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="WallLeft" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 30, 110 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallLeft" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeft" index="1"]
+
+position = Vector2( 5.33333, 2.86102e-06 )
+scale = Vector2( 0.833333, 1 )
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="WallRight" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 190, 110 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallRight" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRight" index="1"]
+
+position = Vector2( -5.33334, 2.86102e-06 )
+scale = Vector2( 0.833333, 1 )
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="WallRightBottom" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 190, 190 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallRightBottom" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRightBottom/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRightBottom" index="1"]
+
+position = Vector2( -5.33333, -5.33333 )
+scale = Vector2( 0.833333, 0.833333 )
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="WallRightTop" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 190, 30 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallRightTop" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRightTop/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRightTop" index="1"]
+
+position = Vector2( -5.33332, 5.33333 )
+scale = Vector2( 0.833334, 0.833333 )
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="WallLeftTop" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 30, 30 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallLeftTop" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeftTop/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeftTop" index="1"]
+
+position = Vector2( 5.33333, 5.33333 )
+scale = Vector2( 0.833333, 0.833333 )
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="WallLeftBottom" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 30, 190 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallLeftBottom" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 14
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeftBottom/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeftBottom" index="1"]
+
+position = Vector2( 5.33333, -5.33333 )
+scale = Vector2( 0.833333, 0.833333 )
+occluder = SubResource( 2 )
+light_mask = 1
+
+
