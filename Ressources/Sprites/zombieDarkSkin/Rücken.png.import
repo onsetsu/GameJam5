@@ -7,7 +7,10 @@ path="res://.import/Rücken.png-870429aad927d16380ecbc6d9e17ca31.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombieDarkSkin/Rücken.png"
+source_md5="11dff38b15a3ae5da6522ba83a7cf54f"
+
 dest_files=[ "res://.import/Rücken.png-870429aad927d16380ecbc6d9e17ca31.stex" ]
+dest_md5="9940a3c64b318a9ca023f1090288d96f"
 
 [params]
 

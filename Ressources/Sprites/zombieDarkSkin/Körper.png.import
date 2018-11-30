@@ -7,7 +7,10 @@ path="res://.import/Körper.png-77f3ab772c5f4551dd21c71d48d80d9c.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombieDarkSkin/Körper.png"
+source_md5="791bdfce74203298e99a7db5b82e0dba"
+
 dest_files=[ "res://.import/Körper.png-77f3ab772c5f4551dd21c71d48d80d9c.stex" ]
+dest_md5="575c64a772a9d889f06c880f504cbe69"
 
 [params]
 
