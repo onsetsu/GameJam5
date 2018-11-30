@@ -16,4 +16,4 @@ func _process(delta):
     if !sound_emitted && counter > 2:
         sound_emitted = true
         for enemy in get_tree().get_nodes_in_group('enemy'):
-            enemy._sound_emitted($Player, 'basic')
+            enemy._sound_emitted($Player.position, 'basic')
