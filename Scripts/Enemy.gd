@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+onready var LEVEL = get_tree().get_root().get_node('Level1')
 onready var nav_map = get_tree().get_root().get_node('Level1/nav_map')
 
 var current_state = null
@@ -11,9 +12,6 @@ onready var states_map = {
 
 export(NodePath) var idle_path_init = null
 export var speed = 50
-var idle_path
-export var idle_path_time = 4
-var idle_path_index = 0
 
 func _ready():
     current_state = $States/idle
@@ -35,3 +33,6 @@ func _change_state(state_name):
     current_state.exit(self)
     current_state = states_map[state_name]
     current_state.enter(self)
+
+func _sound_emitted(pos, type):
+    print('WRAAAAAR')

@@ -27,6 +27,8 @@ func update(host, delta):
         next_curve_point()
     
     # TODO: check for environment
+    if host.LEVEL.sound_emitted:
+        return 'searching'
     
 func exit(host):
     pass

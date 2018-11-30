@@ -1,5 +1,7 @@
 extends Node
 
+var target_pos = Vector2(0,0)
+
 func _ready():
     pass
 
@@ -7,17 +9,14 @@ func ready(host):
     pass
 
 func enter(host):
-    pass
+    target_pos = host.LEVEL.get_node('Player').position
 
 func update(host, delta):
-    # idle stuff
-    var curve = idle_path.curve
-    var target_pos = curve.get_point_position(idle_path_index)
     host.navigate_to_point(target_pos)
-    if (host.position - target_pos).length() < 10:
-        next_curve_point()
     
     # TODO: check for environment
+    if (target_pos - host.position).length() < 20:
+        return 'idle'
     
 func exit(host):
     pass
