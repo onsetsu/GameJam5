@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # class member variables go here, for example:
 var velocity = Vector2(0, 0);
-var speed = 100;
+var speed = 300;
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -41,5 +41,12 @@ func _physics_process(delta):
 	rotate_toward_mouse()
 	velocity = self.move_and_slide(velocity)
 	
+func clear_pickup():
+	for child in $GrabbingHand.get_children():
+		child.queue_free()
+
 func pick_up(pickup):
-	print('Hello world!')
+	self.clear_pickup()
+	pickup.picked_up_by(self)
+	$GrabbingHand.add_child(pickup)
+	print($GrabbingHand.get_children())
