@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # class member variables go here, for example:
 var velocity = Vector2(0, 0);
-var speed = 5000;
+var speed = 10000;
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -26,9 +26,17 @@ func processInput(delta):
 		direction.x += 1
 	if Input.is_action_pressed('move_left'):
 		direction.x -= 1
-		
+	
 	velocity = direction.normalized() * delta * speed
+	
+func rotateTowardMouse():
+	var mousePos = self.get_global_mouse_position()
+	var transform = self.get_transform()
+	self.look_at(mousePos)
+	
+
 
 func _physics_process(delta):
 	processInput(delta)
+	rotateTowardMouse()
 	velocity = self.move_and_slide(velocity)
