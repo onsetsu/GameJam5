@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32.4727, -32.5084, 32.5014, -32.4413, 32.4342, 32.341, -32.5782, 32.4081 )
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite" index="0"]
+
+occluder = SubResource( 1 )
+light_mask = 1
+
+
