@@ -1,47 +1,29 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Flashlight.tscn" type="PackedScene" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://LightSpike/spot.png" type="Texture" id=4]
+[ext_resource path="res://LightSpike/spot.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Flashlight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 10.0
+radius = 30.0
 
 [node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 9
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 
-[node name="Flashlight" parent="." index="0" instance=ExtResource( 2 )]
-
-[node name="Sprite" type="Sprite" parent="." index="1"]
-
-texture = ExtResource( 3 )
-_sections_unfolded = [ "Animation", "Region", "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-
-scale = Vector2( 3, 3 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Light2D" type="Light2D" parent="." index="3"]
+[node name="Light2D" type="Light2D" parent="." index="0"]
 
 enabled = true
 editor_only = false
-texture = ExtResource( 4 )
+texture = ExtResource( 2 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -60,9 +42,23 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-_sections_unfolded = [ "Range", "Shadow" ]
-__meta__ = {
-"_edit_lock_": true
-}
+
+[node name="Flashlight" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="3"]
+
+rotation = 1.5708
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Animation", "Region", "Transform" ]
+
+[node name="grabbingHand" type="Node2D" parent="." index="4"]
+
+position = Vector2( 32.5447, 32.0441 )
+_sections_unfolded = [ "Transform" ]
 
 
