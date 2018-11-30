@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Enemy/idle.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Enemy/chasing.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -15,6 +17,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+idle_path = 5
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -24,5 +27,15 @@ texture = ExtResource( 2 )
 
 scale = Vector2( 3.44411, 3.44411 )
 shape = SubResource( 1 )
+
+[node name="States" type="Node" parent="." index="2"]
+
+[node name="idle" type="Node" parent="States" index="0"]
+
+script = ExtResource( 3 )
+
+[node name="chasing" type="Node" parent="States" index="1"]
+
+script = ExtResource( 4 )
 
 
