@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://LightSpike/spot.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Flashlight.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://Animations/player.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -43,8 +42,11 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="Flashlight" parent="." index="1" instance=ExtResource( 3 )]
+
+rotation = 3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
@@ -61,9 +63,5 @@ _sections_unfolded = [ "Animation", "Region", "Transform" ]
 
 position = Vector2( 32.5447, 32.0441 )
 _sections_unfolded = [ "Transform" ]
-
-[node name="Sprite" type="Sprite" parent="GrabbingHand" index="0"]
-
-texture = ExtResource( 5 )
 
 
