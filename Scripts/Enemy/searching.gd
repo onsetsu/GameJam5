@@ -1,22 +1,13 @@
 extends Node
 
-var idle_path
-export var idle_path_time = 4
-var idle_path_index = 0
-
 func _ready():
     pass
 
 func ready(host):
-    idle_path = host.get_node(host.idle_path_init)
+    pass
 
 func enter(host):
     pass
-
-func next_curve_point():
-    print('next point')
-    idle_path_index += 1
-    idle_path_index %= idle_path.curve.get_point_count()
 
 func update(host, delta):
     # idle stuff
