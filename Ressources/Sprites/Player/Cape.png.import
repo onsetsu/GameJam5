@@ -7,7 +7,10 @@ path="res://.import/Cape.png-8e3062e6345941f196a1a3438033a8d4.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/Cape.png"
+source_md5="0bbef11219150ed26f66bfbfbc538f37"
+
 dest_files=[ "res://.import/Cape.png-8e3062e6345941f196a1a3438033a8d4.stex" ]
+dest_md5="5cd0b49091e6dbcfe18d8778b0d20f7b"
 
 [params]
 

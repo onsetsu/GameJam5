@@ -7,7 +7,10 @@ path="res://.import/CapeLightningRand.png-2dc9fc8ab9f5d47d8c4c791ae48d203c.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/CapeLightningRand.png"
+source_md5="c22c0d28c26538c395d41e779449decc"
+
 dest_files=[ "res://.import/CapeLightningRand.png-2dc9fc8ab9f5d47d8c4c791ae48d203c.stex" ]
+dest_md5="f58ef74221fdc8ac943e5ad85f131282"
 
 [params]
 

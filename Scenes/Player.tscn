@@ -10,11 +10,11 @@
 custom_solver_bias = 0.0
 radius = 30.0
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 2
-collision_mask = 9
+collision_mask = 13
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
@@ -42,8 +42,11 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="Flashlight" parent="." index="1" instance=ExtResource( 3 )]
+
+rotation = 3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
@@ -56,7 +59,7 @@ rotation = 1.5708
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Animation", "Region", "Transform" ]
 
-[node name="grabbingHand" type="Node2D" parent="." index="4"]
+[node name="GrabbingHand" type="Node2D" parent="." index="4"]
 
 position = Vector2( 32.5447, 32.0441 )
 _sections_unfolded = [ "Transform" ]
