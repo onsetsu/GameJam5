@@ -15,15 +15,19 @@ func _ready():
 #	pass
 
 func processInput(delta):
+	direction = Vector2(0,0)
+	
 	if Input.is_action_pressed('move_down'):
-		velocity.y -= delta * speed
+		direction.y -= 1
 	if Input.is_action_pressed('move_up'):
-		velocity.y += delta * speed
+		direction.y += 1
 	
 	if Input.is_action_pressed('move_right'):
-		velocity.y += delta * speed
+		direction.x += 1
 	if Input.is_action_pressed('move_left'):
-		velocity.y -= delta * speed
+		direction.x -= 1
+		
+	velocity += direction.normalized() * delta * speed
 
 func _physics_process(delta):
 	processInput(delta)
