@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # class member variables go here, for example:
 var velocity = Vector2(0, 0);
-var speed = 300;
+var speed = 200;
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -69,4 +69,4 @@ func throw_pickup():
 		get_parent().add_child(pickup)
 		pickup.set_global_position(pickupPosition)
 		
-		pickup.thrown_by(self, Vector2(1,0))
+		pickup.thrown_by(self, (self.get_global_mouse_position() - pickupPosition.get_global_position()).normalized())
