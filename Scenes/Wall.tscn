@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 
@@ -8,7 +8,20 @@ closed = true
 cull_mode = 0
 polygon = PoolVector2Array( -32.4727, -32.5084, 32.5014, -32.4413, 32.4342, 32.341, -32.5782, 32.4081 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Node2D" type="StaticBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -18,5 +31,11 @@ texture = ExtResource( 1 )
 
 occluder = SubResource( 1 )
 light_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0.00418246, 0.033931 )
+scale = Vector2( 3.27325, 3.22476 )
+shape = SubResource( 2 )
 
 
