@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0">
+        <file id="0" name="Cape.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="CapeLightningLeft.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="2" name="CapeLightningRand.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="3" name="CapeLightningRight.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="4" name="Schultern.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="5" name="Taschenlampe.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="6" name="capy.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <animation id="0" name="NewAnimation" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="5" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="4" key="0" z_index="5"/>
+                    <object_ref id="6" timeline="6" key="0" z_index="6"/>
+                </key>
+                <key id="1" time="224">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="5" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="4" key="0" z_index="5"/>
+                    <object_ref id="6" timeline="6" key="1" z_index="6"/>
+                </key>
+                <key id="2" time="333">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="5" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="4" key="1" z_index="5"/>
+                    <object_ref id="6" timeline="6" key="2" z_index="6"/>
+                </key>
+                <key id="3" time="498">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="5" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="4" key="1" z_index="5"/>
+                    <object_ref id="6" timeline="6" key="3" z_index="6"/>
+                </key>
+                <key id="4" time="702">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="5" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="4" key="2" z_index="5"/>
+                    <object_ref id="6" timeline="6" key="4" z_index="6"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="Cape">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-129.090909" y="108.181818"/>
+                </key>
+                <key id="1" time="498" spin="0">
+                    <object folder="0" file="0" x="-120.488759" y="106.568915" scale_x="0.926337" scale_y="0.942838"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="CapeLightningLeft">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-130" y="109.545455"/>
+                </key>
+                <key id="1" time="498" spin="0">
+                    <object folder="0" file="1" x="-113.333333" y="115.459433" scale_x="0.850061" scale_y="0.988442" a="0.32414"/>
+                </key>
+            </timeline>
+            <timeline id="2" name="CapeLightningRand">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-128.636364" y="107.727273"/>
+                </key>
+                <key id="1" time="498" spin="0">
+                    <object folder="0" file="2" x="-120.034213" y="97.512219" scale_x="0.928312" scale_y="0.90488" a="0.41379"/>
+                </key>
+            </timeline>
+            <timeline id="3" name="CapeLightningRight">
+                <key id="0" spin="0">
+                    <object folder="0" file="3" x="-129.545455" y="108.636364"/>
+                </key>
+                <key id="1" time="498" spin="0">
+                    <object folder="0" file="3" x="-118.255132" y="101.109482" scale_x="0.913783" scale_y="0.917197" a="0.55172"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="Schultern">
+                <key id="0" spin="-1">
+                    <object folder="0" file="4" x="-131.075269" y="100.322581" scale_y="0.911636"/>
+                </key>
+                <key id="1" time="333">
+                    <object folder="0" file="4" x="-125.16129" y="102.473118" angle="358" scale_y="0.911636"/>
+                </key>
+                <key id="2" time="702" spin="-1">
+                    <object folder="0" file="4" x="-133.809386" y="98.057584" angle="2" scale_y="0.911636"/>
+                </key>
+            </timeline>
+            <timeline id="5" name="Taschenlampe">
+                <key id="0" spin="0">
+                    <object folder="0" file="5" x="-128.181818" y="105.454545"/>
+                </key>
+            </timeline>
+            <timeline id="6" name="capy">
+                <key id="0" spin="-1">
+                    <object folder="0" file="6" x="-130.454545" y="109.545455"/>
+                </key>
+                <key id="1" time="224">
+                    <object folder="0" file="6" x="-129.9543" y="111.195747" angle="359"/>
+                </key>
+                <key id="2" time="333">
+                    <object folder="0" file="6" x="-129.486932" y="110.426306" angle="359.140464"/>
+                </key>
+                <key id="3" time="498">
+                    <object folder="0" file="6" x="-129.726297" y="110.208404" angle="0"/>
+                </key>
+                <key id="4" time="702" spin="-1">
+                    <object folder="0" file="6" x="-131.635142" y="108.326095" angle="2"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
