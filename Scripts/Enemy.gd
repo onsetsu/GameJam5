@@ -10,7 +10,7 @@ onready var states_map = {
     'searching': $States/searching,
     'waiting': $States/waiting
 }
-var direction = Vector2(0,-1)
+var direction = Vector2(1,0)
 
 export(NodePath) var idle_path_init = null
 export var speed = 70
