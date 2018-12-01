@@ -29,7 +29,7 @@ tracks/0/keys = {
 "values": [ 0, 29 ]
 }
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 2
@@ -85,7 +85,7 @@ scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
 vframes = 6
 hframes = 5
-frame = 26
+frame = 28
 _sections_unfolded = [ "Animation", "Region", "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite" index="0"]

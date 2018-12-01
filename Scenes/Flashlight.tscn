@@ -10,7 +10,7 @@ closed = false
 cull_mode = 0
 polygon = PoolVector2Array( -15, -5, 10, 0, 10, 0, -15, 5 )
 
-[node name="Flashlight" type="Light2D" index="0"]
+[node name="Flashlight" type="Light2D"]
 
 light_mask = 3
 enabled = true
