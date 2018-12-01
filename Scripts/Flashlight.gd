@@ -19,6 +19,7 @@ func _process(delta):
 	elif timeToRecharge <= 0:
 		battery += delta * batteryRechargingFactor
 	battery = clamp(battery, -maxBattery, maxBattery)
+	set_energy(clamp(battery, 0, 1))
 	set_activated(flashlightActive)
 
 
