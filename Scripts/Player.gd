@@ -69,4 +69,4 @@ func throw_pickup():
 		get_parent().add_child(pickup)
 		pickup.set_global_position(pickupPosition)
 		
-		pickup.thrown_by(self, (self.get_global_mouse_position() - pickupPosition.get_global_position()).normalized())
+		pickup.thrown_by(self, (self.get_global_mouse_position() - pickup.get_global_position()).normalized())
