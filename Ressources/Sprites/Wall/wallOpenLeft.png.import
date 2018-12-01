@@ -7,10 +7,14 @@ path="res://.import/wallOpenLeft.png-4ee9cf56f542d54caabb4fc12ce8cd49.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Wall/wallOpenLeft.png"
+<<<<<<< HEAD
 source_md5="071d9f0722fc2dfb6e01b0707855d2f3"
 
 dest_files=[ "res://.import/wallOpenLeft.png-4ee9cf56f542d54caabb4fc12ce8cd49.stex" ]
 dest_md5="aafbb5275bdeec7033793e77a5f27e2c"
+=======
+dest_files=[ "res://.import/wallOpenLeft.png-4ee9cf56f542d54caabb4fc12ce8cd49.stex" ]
+>>>>>>> eaf24956a394feeb1ab5f9fa6cd295eddb7641f3
 
 [params]
 
