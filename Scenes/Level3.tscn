@@ -1,14 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=1]
-[ext_resource path="res://Ressources/Sprites/Background/muddySomething.png" type="Texture" id=2]
-[ext_resource path="res://Tileset/Tileset.res" type="TileSet" id=3]
-[ext_resource path="res://Scenes/Pickup.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scripts/nav_map.gd" type="Script" id=5]
-[ext_resource path="res://Scenes/JustLight.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/EndingArea.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/BackgoundSound.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ressources/Sprites/Background/muddySomething.png" type="Texture" id=3]
+[ext_resource path="res://Tileset/Tileset.res" type="TileSet" id=4]
+[ext_resource path="res://Scenes/Pickup.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/nav_map.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/JustLight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/EndingArea.tscn" type="PackedScene" id=10]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -43,22 +44,24 @@ _data = {
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprite2" type="Sprite" parent="." index="0"]
+[node name="BackgroundSound" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
 
 position = Vector2( 1641.21, 747.156 )
 scale = Vector2( 3.75236, 2.41632 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 2300, 2300 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TileMap" type="TileMap" parent="." index="1"]
+[node name="TileMap" type="TileMap" parent="." index="2"]
 
 scale = Vector2( 0.25, 0.25 )
 mode = 0
-tile_set = ExtResource( 3 )
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 256, 256 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -79,13 +82,13 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Pickup" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Pickup" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 970, 1090 )
 
-[node name="nav_map" type="Navigation2D" parent="." index="3"]
+[node name="nav_map" type="Navigation2D" parent="." index="4"]
 
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -99,92 +102,91 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Node2D" parent="nav_map/NavigationPolygonInstance" index="0" instance=ExtResource( 6 )]
+[node name="Node2D" parent="nav_map/NavigationPolygonInstance" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 930.22, 689.703 )
 
-[node name="Node2D2" parent="nav_map/NavigationPolygonInstance" index="1" instance=ExtResource( 6 )]
+[node name="Node2D2" parent="nav_map/NavigationPolygonInstance" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 1360.22, 699.565 )
 
-[node name="Node2D3" parent="nav_map/NavigationPolygonInstance" index="2" instance=ExtResource( 6 )]
+[node name="Node2D3" parent="nav_map/NavigationPolygonInstance" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 1000.5, 1549.68 )
 
-[node name="Node2D4" parent="nav_map/NavigationPolygonInstance" index="3" instance=ExtResource( 6 )]
+[node name="Node2D4" parent="nav_map/NavigationPolygonInstance" index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 789.853, -460.252 )
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="4"]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="5"]
 
-visible = false
 color = Color( 0.0351563, 0.0296631, 0.0296631, 0.966863 )
 
-[node name="Player" parent="." index="5" instance=ExtResource( 7 )]
+[node name="Player" parent="." index="6" instance=ExtResource( 8 )]
 
 position = Vector2( 370.533, 680.092 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Pickup2" parent="." index="6" instance=ExtResource( 4 )]
+[node name="Pickup2" parent="." index="7" instance=ExtResource( 5 )]
 
 position = Vector2( 2880, 50 )
 
-[node name="KinematicBody2D" parent="." index="7" instance=ExtResource( 8 )]
+[node name="KinematicBody2D" parent="." index="8" instance=ExtResource( 9 )]
 
 position = Vector2( 3020, 500 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="KinematicBody2D3" parent="." index="8" instance=ExtResource( 8 )]
+[node name="KinematicBody2D3" parent="." index="9" instance=ExtResource( 9 )]
 
 position = Vector2( 1456.48, 242.244 )
 _sections_unfolded = [ "Transform" ]
 idle_path_init = NodePath("../Path2D")
 
-[node name="KinematicBody2D4" parent="." index="9" instance=ExtResource( 8 )]
+[node name="KinematicBody2D4" parent="." index="10" instance=ExtResource( 9 )]
 
 position = Vector2( 1556.66, 1110.69 )
 _sections_unfolded = [ "Transform" ]
 idle_path_init = NodePath("../Path2D2")
 
-[node name="KinematicBody2D5" parent="." index="10" instance=ExtResource( 8 )]
+[node name="KinematicBody2D5" parent="." index="11" instance=ExtResource( 9 )]
 
 position = Vector2( 790, 1440 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="KinematicBody2D6" parent="." index="11" instance=ExtResource( 8 )]
+[node name="KinematicBody2D6" parent="." index="12" instance=ExtResource( 9 )]
 
 position = Vector2( 790, 1570 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="KinematicBody2D7" parent="." index="12" instance=ExtResource( 8 )]
+[node name="KinematicBody2D7" parent="." index="13" instance=ExtResource( 9 )]
 
 position = Vector2( 790, 1700 )
 
-[node name="KinematicBody2D8" parent="." index="13" instance=ExtResource( 8 )]
+[node name="KinematicBody2D8" parent="." index="14" instance=ExtResource( 9 )]
 
 position = Vector2( 2490, -250 )
 _sections_unfolded = [ "Transform" ]
 idle_path_init = NodePath("../Path2D3")
 
-[node name="Path2D" type="Path2D" parent="." index="14"]
+[node name="Path2D" type="Path2D" parent="." index="15"]
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 curve = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Path2D2" type="Path2D" parent="." index="15"]
+[node name="Path2D2" type="Path2D" parent="." index="16"]
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 curve = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Path2D3" type="Path2D" parent="." index="16"]
+[node name="Path2D3" type="Path2D" parent="." index="17"]
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 curve = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="EndingArea" parent="." index="17" instance=ExtResource( 9 )]
+[node name="EndingArea" parent="." index="18" instance=ExtResource( 10 )]
 
 position = Vector2( 3340, 810 )
 nextLevel = 4
