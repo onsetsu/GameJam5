@@ -3,6 +3,8 @@ extends KinematicBody2D
 # class member variables go here, for example:
 var velocity = Vector2(0, 0);
 var speed = 100;
+var stepTime = 0.5
+var stepTimer = 0.5
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -41,12 +43,22 @@ func rotate_toward_mouse():
 	var mousePos = self.get_global_mouse_position()
 	var transform = self.get_transform()
 	self.look_at(mousePos)
-	
 
+func emit_sound(type):
+	for enemy in get_tree().get_nodes_in_group('enemy'):
+		enemy._sound_emitted(self.get_global_position(), type)
+
+func emit_step_sounds(delta):
+	stepTimer -= delta
+	if velocity.abs().length() > 1 && stepTimer <= 0:
+		emit_sound('step')
+		print('step')
+		stepTimer = stepTime
 
 func _physics_process(delta):
 	process_input(delta)
 	rotate_toward_mouse()
+	emit_step_sounds(delta)
 	velocity = self.move_and_slide(velocity)
 
 func has_pickup():
