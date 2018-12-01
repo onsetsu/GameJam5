@@ -6,9 +6,7 @@ extends RigidBody2D
 var throwImpulse = 500
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	self.set_max_contacts_reported(1)
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
@@ -37,17 +35,24 @@ func emit_sound():
 	for enemy in get_tree().get_nodes_in_group('enemy'):
 		enemy._sound_emitted(self.get_global_position(), 'basic')
 
+func create_timer(seconds):
+	var timer = Timer.new()
+	timer.set_one_shot(true)
+	timer.set_wait_time(seconds)
+	self.add_child(timer)
+	timer.start()
+	return timer
+
 func thrown_by(player, direction):
 	$PickupArea.set_monitoring(false)
 	self.apply_impulse(to_global(Vector2(0,0)), direction * throwImpulse)
 	set_collision(true)
 	
-	var timer = Timer.new()
-	timer.set_one_shot(true)
-	timer.set_wait_time(1)
-	self.add_child(timer)
-	timer.start()
-	yield(timer, 'timeout')
-	
+	yield(create_timer(1), 'timeout')
 	$PickupArea.set_monitoring(true)
+	
+	yield(create_timer(2), 'timeout')
+	emit_sound()
+
+func _on_Pickup_body_entered(body):
 	emit_sound()
