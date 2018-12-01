@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wallRight.png-5274e44ba1ceace95a8693f3e273d5ba.stex"
+path="res://.import/wallOpenRight.png-05d794a8c8aa106094d968013c8bd338.stex"
 
 [deps]
 
-source_file="res://Ressources/Sprites/Wall/wallRight.png"
-source_md5="f06d9a23016459b1827b3078fc71b8b0"
+source_file="res://Ressources/Sprites/Wall/wallOpenRight.png"
+source_md5="fcd0677d8e2eae619b48ebdfbf91f612"
 
-dest_files=[ "res://.import/wallRight.png-5274e44ba1ceace95a8693f3e273d5ba.stex" ]
-dest_md5="3163ec4399958fe917cecc14e803e9c0"
+dest_files=[ "res://.import/wallOpenRight.png-05d794a8c8aa106094d968013c8bd338.stex" ]
+dest_md5="ec1819c5df0a53287f0b22354c25f8bc"
 
 [params]
 

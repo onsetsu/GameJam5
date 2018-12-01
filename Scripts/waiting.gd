@@ -2,7 +2,7 @@ extends Node
 
 var speed_modifier = 0
 
-var time_to_normalize = 5
+var time_to_normalize = 1
 var current_time = 0
 
 func _ready():
