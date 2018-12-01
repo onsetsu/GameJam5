@@ -23,6 +23,8 @@ func _on_PickupArea_body_entered(body):
 func picked_up_by(player):
 	print('picked up')
 	$PickupArea.set_monitoring(false)
+	print(self.get_collision_layer_bit(2))
+	self.set_collision_layer_bit(2, false)
 	self.set_linear_velocity(Vector2(0,0))
 	self.set_angular_velocity(0)
 	get_parent().remove_child(self)
