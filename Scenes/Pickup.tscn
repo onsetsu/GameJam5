@@ -13,11 +13,11 @@ radius = 15.0
 custom_solver_bias = 0.0
 radius = 20.0
 
-[node name="Pickup" type="RigidBody2D"]
+[node name="Pickup" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 4
-collision_mask = 9
+collision_mask = 1
 mode = 0
 mass = 1.0
 friction = 0.5
@@ -30,9 +30,9 @@ contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
+linear_damp = 0.5
 angular_velocity = 0.0
-angular_damp = -1.0
+angular_damp = 10.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear" ]
 

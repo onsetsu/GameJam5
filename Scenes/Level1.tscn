@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/nav_map.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Pickup.tscn" type="PackedScene" id=6]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -22,46 +23,46 @@ extents = Vector2( 475.595, 27.2466 )
 custom_solver_bias = 0.0
 extents = Vector2( 139.802, 24.2119 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.8712 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 202.835, 126.499 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 199.777, 109.317 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 30.1014, 109.727 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 94.2679, 73.4453 )
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=9]
 
 bake_interval = 5.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 583.423, 311.11, 0, 0, 0, 0, 398.377, 129.137, 0, 0, 0, 0, 616.928, 283.004, 0, 0, 0, 0, 946.687, 299.867 )
+"points": PoolVector2Array( 0, 0, 0, 0, 408.146, 321.665, 0, 0, 0, 0, 564.112, 308.137, 0, 0, 0, 0, 742.358, 308.137, 0, 0, 0, 0, 946.687, 299.867 )
 }
 
-[sub_resource type="Curve2D" id=5]
+[sub_resource type="Curve2D" id=10]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 125.561, 422.007, 0, 0, 0, 0, 392.05, 416.455, 0, 0, 0, 0, 401.303, 205.485, 0, 0, 0, 0, 110.756, 201.784 )
 }
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -234,7 +235,7 @@ bounce = 0.0
 
 position = Vector2( 42.0631, 136.933 )
 scale = Vector2( 4.23562, 11.5333 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="NinePatchRect6" type="NinePatchRect" parent="." index="5"]
 
@@ -273,7 +274,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NinePatchRect6/StaticBody2D" index="0"]
 
 position = Vector2( 209.12, 129.543 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="NinePatchRect7" type="NinePatchRect" parent="." index="6"]
 
@@ -312,7 +313,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NinePatchRect7/StaticBody2D" index="0"]
 
 position = Vector2( 205.419, 116.589 )
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 
 [node name="NinePatchRect5" type="NinePatchRect" parent="." index="7"]
 
@@ -352,7 +353,7 @@ bounce = 0.0
 
 position = Vector2( 41.0643, 120.29 )
 scale = Vector2( 1.23422, 1 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="NinePatchRect8" type="NinePatchRect" parent="." index="8"]
 
@@ -392,7 +393,7 @@ bounce = 0.0
 
 position = Vector2( 88.2549, 75.8754 )
 scale = Vector2( 0.898961, 1 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="Enemy" parent="." index="9" instance=ExtResource( 4 )]
 
@@ -402,7 +403,7 @@ idle_path_init = NodePath("../Enemy_Path")
 [node name="Enemy_Path" type="Path2D" parent="." index="10"]
 
 scale = Vector2( 1.04945, 0.987654 )
-curve = SubResource( 4 )
+curve = SubResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Enemy2" parent="." index="11" instance=ExtResource( 4 )]
@@ -412,11 +413,23 @@ idle_path_init = NodePath("../Enemy_Path2")
 
 [node name="Enemy_Path2" type="Path2D" parent="." index="12"]
 
-curve = SubResource( 5 )
+curve = SubResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="13" instance=ExtResource( 5 )]
 
-position = Vector2( 247.588, 91.1451 )
+position = Vector2( 237.567, 91.1451 )
+
+[node name="Enemy3" parent="." index="14" instance=ExtResource( 4 )]
+
+position = Vector2( 616.297, 111.902 )
+
+[node name="Pickup" parent="." index="15" instance=ExtResource( 6 )]
+
+position = Vector2( 392.493, 509.406 )
+
+[node name="Pickup2" parent="." index="16" instance=ExtResource( 6 )]
+
+position = Vector2( 613.587, 482.036 )
 
 

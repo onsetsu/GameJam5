@@ -5,23 +5,28 @@ onready var nav_map = get_tree().get_root().get_node('Level1/nav_map')
 
 var current_state = null
 onready var states_map = {
-    'idle': $States/States/idle,
+    'idle': $States/idle,
     'chasing': $States/chasing,
-    'searching': $States/searching
+    'searching': $States/searching,
+    'waiting': $States/waiting
 }
 
 export(NodePath) var idle_path_init = null
 export var speed = 50
 
 func _ready():
+    add_to_group('enemy')
     current_state = $States/idle
     $States/idle.ready(self)
     $States/chasing.ready(self)
     $States/searching.ready(self)
+    $States/waiting.ready(self)
 
 func navigate_to_point(p):
     var path = nav_map.get_simple_path(position, p)
-    move_and_slide((path[1] - position).normalized() * speed)
+    var direction = (path[1] - position).normalized()
+    $rotation.rotation = direction.angle()
+    move_and_slide(direction * speed * current_state.speed_modifier)
 
 func _physics_process(delta):
     # state machine
@@ -35,4 +40,6 @@ func _change_state(state_name):
     current_state.enter(self)
 
 func _sound_emitted(pos, type):
-    print('WRAAAAAR')
+    if (position - pos).length() > 500: return
+    $States/searching.target_pos = pos
+    _change_state('searching')
