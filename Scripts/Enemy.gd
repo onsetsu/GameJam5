@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 onready var LEVEL = get_tree().get_root().get_node('Level1')
 onready var nav_map = get_tree().get_root().get_node('Level1/nav_map')
+var gameOver = preload('res://Scenes/GameOver.tscn')
 
 var current_state = null
 onready var states_map = {
@@ -69,5 +70,8 @@ func _sound_emitted(pos, type):
 
 func _on_range_area_body_entered(body):
 	if body.is_in_group('player'):
-		get_tree().reload_current_scene()
-		print('YOU DIED')
+		var root = get_tree().get_root().get_child(0)
+		for child in root.get_children():
+			child.queue_free()
+		root.add_child(gameOver.instance())
+		
