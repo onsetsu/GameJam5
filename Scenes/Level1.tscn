@@ -3,20 +3,20 @@
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/nav_map.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Pickup.tscn" type="PackedScene" id=6]
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 352.214, 216.482, 441.044, 61.0304, 444.745, 279.403, 346.662, 397.843, 94.978, 64.7316, 137.542, 210.931, 89.4261, 549.594, 139.393, 403.395, 452.148, 531.088, 459.55, 334.922, 589.093, 334.922, 577.99, 273.852, 672.371, 273.852, 568.737, 53.6279, 664.969, 70.2835, 659.417, 532.938, 585.392, 540.341, 657.566, 334.922, 1072.1, 327.52, 1073.96, 257.196 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 1, 0, 5 ), PoolIntArray( 6, 4, 5, 7 ), PoolIntArray( 8, 6, 7, 3 ), PoolIntArray( 9, 8, 3, 2 ), PoolIntArray( 10, 9, 2, 11, 12 ), PoolIntArray( 11, 13, 14, 12 ), PoolIntArray( 15, 16, 10, 17 ), PoolIntArray( 18, 17, 10, 12, 19 ) ]
-outlines = [ PoolVector2Array( 94.978, 64.7316, 441.044, 61.0304, 444.745, 279.403, 577.99, 273.852, 568.737, 53.6279, 664.969, 70.2835, 672.371, 273.852, 1073.96, 257.196, 1072.1, 327.52, 657.566, 334.922, 659.417, 532.938, 585.392, 540.341, 589.093, 334.922, 459.55, 334.922, 452.148, 531.088, 89.4261, 549.594 ), PoolVector2Array( 139.393, 403.395, 137.542, 210.931, 352.214, 216.482, 346.662, 397.843 ) ]
+vertices = PoolVector2Array( 352.214, 216.482, 441.044, 61.0304, 444.745, 279.403, 346.662, 397.843, 94.978, 64.7316, 137.542, 210.931, 89.4261, 549.594, 139.393, 403.395, 452.148, 531.088, 459.55, 334.922, 589.093, 334.922, 577.99, 273.852, 672.371, 273.852, 568.737, 53.6279, 664.969, 70.2835, 659.417, 532.938, 585.392, 540.341, 657.566, 334.922, 1119.93, 327.022, 1132.65, 260.663, 1178.39, 305.309, 1165.03, 580.889, 1116.59, 582.559, 1370.46, 589.24, 1327.03, 589.24, 1330.37, 311.99, 1380.48, 300.299, 1670.45, 70.2623, 1666.08, 560.847, 1510.75, 562.517, 1500.73, 295.288, 1142.67, 60.2412 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 1, 0, 5 ), PoolIntArray( 6, 4, 5, 7 ), PoolIntArray( 8, 6, 7, 3 ), PoolIntArray( 9, 8, 3, 2 ), PoolIntArray( 10, 9, 2, 11, 12 ), PoolIntArray( 11, 13, 14, 12 ), PoolIntArray( 15, 16, 10, 17 ), PoolIntArray( 18, 17, 10, 12, 19, 20 ), PoolIntArray( 21, 22, 18, 20 ), PoolIntArray( 23, 24, 25, 26 ), PoolIntArray( 27, 28, 29, 30 ), PoolIntArray( 31, 27, 30, 26, 19 ), PoolIntArray( 19, 26, 25, 20 ) ]
+outlines = [ PoolVector2Array( 94.978, 64.7316, 441.044, 61.0304, 444.745, 279.403, 577.99, 273.852, 568.737, 53.6279, 664.969, 70.2835, 672.371, 273.852, 1132.65, 260.663, 1142.67, 60.2412, 1670.45, 70.2623, 1666.08, 560.847, 1510.75, 562.517, 1500.73, 295.288, 1380.48, 300.299, 1370.46, 589.24, 1327.03, 589.24, 1330.37, 311.99, 1178.39, 305.309, 1165.03, 580.889, 1116.59, 582.559, 1119.93, 327.022, 657.566, 334.922, 659.417, 532.938, 585.392, 540.341, 589.093, 334.922, 459.55, 334.922, 452.148, 531.088, 89.4261, 549.594 ), PoolVector2Array( 139.393, 403.395, 137.542, 210.931, 352.214, 216.482, 346.662, 397.843 ) ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 475.595, 27.2466 )
+extents = Vector2( 428.213, 27.2466 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -62,7 +62,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 125.561, 422.007, 0, 0, 0, 0, 392.05, 416.455, 0, 0, 0, 0, 401.303, 205.485, 0, 0, 0, 0, 110.756, 201.784 )
 }
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -84,7 +84,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -2.0
 margin_top = -12.0
-margin_right = 1038.0
+margin_right = 1629.0
 margin_bottom = 45.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -112,8 +112,8 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NinePatchRect/StaticBody2D" index="0"]
 
-position = Vector2( 498.167, 27.7593 )
-scale = Vector2( 1.11287, 1 )
+position = Vector2( 826.388, 25.3284 )
+scale = Vector2( 1.91459, 1 )
 shape = SubResource( 2 )
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="." index="2"]
@@ -122,10 +122,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1.0
-margin_top = 567.0
-margin_right = 1041.0
-margin_bottom = 624.0
+margin_left = 6.0
+margin_top = 574.0
+margin_right = 1649.0
+margin_bottom = 631.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -152,8 +152,8 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NinePatchRect4/StaticBody2D" index="0"]
 
-position = Vector2( 519.258, 28 )
-scale = Vector2( 3.68552, 1 )
+position = Vector2( 823.133, 28 )
+scale = Vector2( 5.81346, 1 )
 shape = SubResource( 3 )
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="." index="3"]
@@ -193,8 +193,8 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NinePatchRect3/StaticBody2D2" index="0"]
 
-position = Vector2( 14.2303, 317.732 )
-scale = Vector2( 0.105575, 10.8868 )
+position = Vector2( 13.9389, 317.732 )
+scale = Vector2( 0.118805, 10.8868 )
 shape = SubResource( 2 )
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="." index="4"]
@@ -237,7 +237,88 @@ position = Vector2( 42.0631, 136.933 )
 scale = Vector2( 4.23562, 11.5333 )
 shape = SubResource( 4 )
 
-[node name="NinePatchRect6" type="NinePatchRect" parent="." index="5"]
+[node name="NinePatchRect9" type="NinePatchRect" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1196.0
+margin_top = 342.0
+margin_right = 1282.0
+margin_bottom = 604.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+draw_center = false
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NinePatchRect9" index="0"]
+
+position = Vector2( 0, 1.67017 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NinePatchRect9/StaticBody2D" index="0"]
+
+position = Vector2( 50.4141, 140.273 )
+scale = Vector2( 4.23562, 11.5333 )
+shape = SubResource( 4 )
+
+[node name="NinePatchRect10" type="NinePatchRect" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1393.0
+margin_top = 342.0
+margin_right = 1479.0
+margin_bottom = 604.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+draw_center = false
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NinePatchRect10" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NinePatchRect10/StaticBody2D" index="0"]
+
+position = Vector2( 40.3928, 126.912 )
+scale = Vector2( 4.23562, 11.5333 )
+shape = SubResource( 4 )
+
+[node name="NinePatchRect6" type="NinePatchRect" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -276,16 +357,16 @@ bounce = 0.0
 position = Vector2( 209.12, 129.543 )
 shape = SubResource( 5 )
 
-[node name="NinePatchRect7" type="NinePatchRect" parent="." index="6"]
+[node name="NinePatchRect7" type="NinePatchRect" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 668.0
-margin_top = 359.0
+margin_top = 362.0
 margin_right = 1087.0
-margin_bottom = 621.0
+margin_bottom = 624.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -315,7 +396,7 @@ bounce = 0.0
 position = Vector2( 205.419, 116.589 )
 shape = SubResource( 6 )
 
-[node name="NinePatchRect5" type="NinePatchRect" parent="." index="7"]
+[node name="NinePatchRect5" type="NinePatchRect" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -355,7 +436,7 @@ position = Vector2( 41.0643, 120.29 )
 scale = Vector2( 1.23422, 1 )
 shape = SubResource( 7 )
 
-[node name="NinePatchRect8" type="NinePatchRect" parent="." index="8"]
+[node name="NinePatchRect8" type="NinePatchRect" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -395,44 +476,41 @@ position = Vector2( 88.2549, 75.8754 )
 scale = Vector2( 0.898961, 1 )
 shape = SubResource( 8 )
 
-[node name="Enemy" parent="." index="9" instance=ExtResource( 4 )]
+[node name="Player" parent="." index="11" instance=ExtResource( 4 )]
+
+position = Vector2( 1348.27, 146.725 )
+
+[node name="Enemy" parent="." index="12" instance=ExtResource( 5 )]
 
 position = Vector2( 613.587, 482.036 )
 idle_path_init = NodePath("../Enemy_Path")
-speed = 70
 
-[node name="Enemy_Path" type="Path2D" parent="." index="10"]
+[node name="Enemy_Path" type="Path2D" parent="." index="13"]
 
 scale = Vector2( 1.04945, 0.987654 )
 curve = SubResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Enemy2" parent="." index="11" instance=ExtResource( 4 )]
+[node name="Enemy2" parent="." index="14" instance=ExtResource( 5 )]
 
 position = Vector2( 97.854, 303.435 )
 idle_path_init = NodePath("../Enemy_Path2")
-speed = 70
 
-[node name="Enemy_Path2" type="Path2D" parent="." index="12"]
+[node name="Enemy_Path2" type="Path2D" parent="." index="15"]
 
 curve = SubResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Player" parent="." index="13" instance=ExtResource( 5 )]
+[node name="Enemy3" parent="." index="16" instance=ExtResource( 5 )]
 
-position = Vector2( 237.567, 91.1451 )
+position = Vector2( 1352.44, 259.541 )
 
-[node name="Enemy3" parent="." index="14" instance=ExtResource( 4 )]
+[node name="Pickup" parent="." index="17" instance=ExtResource( 6 )]
 
-position = Vector2( 616.297, 111.902 )
-speed = 70
+position = Vector2( 400.695, 146.459 )
 
-[node name="Pickup" parent="." index="15" instance=ExtResource( 6 )]
+[node name="Pickup2" parent="." index="18" instance=ExtResource( 6 )]
 
-position = Vector2( 392.493, 509.406 )
-
-[node name="Pickup2" parent="." index="16" instance=ExtResource( 6 )]
-
-position = Vector2( 613.587, 482.036 )
+position = Vector2( 1507.63, 141.645 )
 
 
