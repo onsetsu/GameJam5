@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Sprites/Background/muddySomething.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/JustLight.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/EndingArea.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/BackgoundSound.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -22,7 +23,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 175.136, 334.21, 0, 0, 0, 0, 821.774, 316.581 )
 }
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -176,5 +177,7 @@ _sections_unfolded = [ "Material", "Rect", "Size Flags", "Visibility", "custom_c
 
 position = Vector2( 1410.63, 644.925 )
 nextLevel = 2
+
+[node name="BackgroundSound" parent="." index="19" instance=ExtResource( 9 )]
 
 
