@@ -24,7 +24,6 @@ func _physics_process(delta):
 		if shouldEmitBasicSound:
 			emit_sound('basic')
 			shouldEmitBasicSound = false
-			print('basic-sound')
 
 func set_collision(active):
 	self.set_collision_mask_bit(0, active)
