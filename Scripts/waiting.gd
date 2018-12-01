@@ -12,14 +12,13 @@ func ready(host):
     pass
 
 func enter(host):
-    pass
+    current_time = 0
 
 func update(host, delta):
     current_time += delta
     
     # TODO: check for environment
     if current_time > time_to_normalize:
-        current_time = 0
         return 'idle'
     
 func exit(host):

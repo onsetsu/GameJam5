@@ -17,8 +17,10 @@ func update(host, delta):
     host.navigate_to_point(target_pos)
     
     # TODO: check for environment
-    if (target_pos - host.position).length() < 20:
+    if (target_pos - host.position).length() < 40:
         return 'waiting'
+    
+    #nav_map.get_simple_path(position, p)
     
 func exit(host):
     pass

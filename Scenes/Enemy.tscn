@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Enemy/idle.gd" type="Script" id=2]
@@ -10,7 +10,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 10.0
+radius = 8.5308
 
 [sub_resource type="Animation" id=2]
 
@@ -49,7 +49,13 @@ tracks/0/keys = {
 "values": [ 0, 29 ]
 }
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[sub_resource type="CapsuleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 34.7531
+height = 1.30029
+
+[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 8
@@ -57,7 +63,7 @@ collision_mask = 11
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 idle_path_init = null
-speed = 50
+speed = 70
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -105,5 +111,21 @@ playback_speed = 1.0
 anims/standing = SubResource( 2 )
 anims/walking = SubResource( 3 )
 blend_times = [  ]
+
+[node name="range_area" type="Area2D" parent="." index="3"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="range_area_shape" type="CollisionShape2D" parent="range_area" index="0"]
+
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="range_area" to="." method="_on_range_area_body_entered"]
 
 
