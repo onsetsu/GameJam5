@@ -24,7 +24,9 @@ func _ready():
 
 func navigate_to_point(p):
     var path = nav_map.get_simple_path(position, p)
-    move_and_slide((path[1] - position).normalized() * speed * current_state.speed_modifier)
+    var direction = (path[1] - position).normalized()
+    $rotation.rotation = direction.angle()
+    move_and_slide(direction * speed * current_state.speed_modifier)
 
 func _physics_process(delta):
     # state machine
