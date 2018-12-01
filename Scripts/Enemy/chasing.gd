@@ -16,7 +16,6 @@ func enter(host):
 func update(host, delta):
     var target_pos = get_tree().get_root().get_node('Level1/Player').position
     host.navigate_to_point(target_pos)
-    print('chasing', host.length_to_point(target_pos))
     if host.length_to_point(target_pos) > 500:
         host.get_node('States/searching').target_pos = target_pos
         return 'searching'

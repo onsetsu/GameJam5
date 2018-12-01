@@ -56,7 +56,7 @@ custom_solver_bias = 0.0
 radius = 34.7531
 height = 1.30029
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 8
@@ -75,7 +75,6 @@ shape = SubResource( 1 )
 
 stream = ExtResource( 2 )
 volume_db = -10.0
-pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
