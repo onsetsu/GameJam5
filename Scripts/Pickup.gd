@@ -19,12 +19,15 @@ func _ready():
 func _on_PickupArea_body_entered(body):
 	if body.has_method('pick_up'):
 		body.pick_up(self)
-		
+
+func set_collision(active):
+	self.set_collision_mask_bit(0, active)
+	self.set_collision_layer_bit(2, active)
+
 func picked_up_by(player):
 	print('picked up')
 	$PickupArea.set_monitoring(false)
-	print(self.get_collision_layer_bit(2))
-	self.set_collision_layer_bit(2, false)
+	set_collision(false)
 	self.set_linear_velocity(Vector2(0,0))
 	self.set_angular_velocity(0)
 	get_parent().remove_child(self)
@@ -37,6 +40,7 @@ func emit_sound():
 func thrown_by(player, direction):
 	$PickupArea.set_monitoring(false)
 	self.apply_impulse(to_global(Vector2(0,0)), direction * throwImpulse)
+	set_collision(true)
 	
 	var timer = Timer.new()
 	timer.set_one_shot(true)

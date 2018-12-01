@@ -13,7 +13,7 @@ radius = 15.0
 custom_solver_bias = 0.0
 radius = 20.0
 
-[node name="Pickup" type="RigidBody2D"]
+[node name="Pickup" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 4
