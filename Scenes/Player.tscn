@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://LightSpike/spot.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Flashlight.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Animations/player.png" type="Texture" id=4]
+[ext_resource path="res://Animations/playerV2.png" type="Texture" id=4]
 [ext_resource path="res://Ressources/Sound/sfx_step_grass_r.wav" type="AudioStream" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -41,7 +41,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="GrabbingHand" type="Node2D" parent="." index="0"]
 
-position = Vector2( 25.375, -22.2947 )
+position = Vector2( 14.5568, 19.8684 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Light2D" type="Light2D" parent="." index="1"]
@@ -52,7 +52,7 @@ texture = ExtResource( 2 )
 offset = Vector2( 0, 0 )
 texture_scale = 2.0
 color = Color( 1, 1, 1, 1 )
-energy = 0.5
+energy = 0.7
 mode = 0
 range_height = 0.0
 range_z_min = -1024
@@ -76,11 +76,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Flashlight" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 33.7875, 15.4463 )
+position = Vector2( 49.5986, -12.2926 )
 rotation = 3.14159
 
 [node name="Sprite" type="Sprite" parent="." index="4"]
 
+position = Vector2( 12.7599, -0.832169 )
 rotation = 1.5708
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
