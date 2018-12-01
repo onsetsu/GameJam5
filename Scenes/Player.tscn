@@ -63,15 +63,15 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Transform" ]
 
-[node name="Flashlight" parent="." index="1" instance=ExtResource( 3 )]
-
-position = Vector2( 23.9611, 14.8828 )
-rotation = 3.14159
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Flashlight" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 25.1815, 15.1389 )
+rotation = 3.14159
 
 [node name="Sprite" type="Sprite" parent="." index="3"]
 
@@ -98,7 +98,7 @@ blend_times = [  ]
 position = Vector2( 32.5447, 32.0441 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Camera2D" type="Camera2D" parent="." index="5"]
+[node name="camera" type="Camera2D" parent="." index="5"]
 
 position = Vector2( 200, 0 )
 anchor_mode = 1
