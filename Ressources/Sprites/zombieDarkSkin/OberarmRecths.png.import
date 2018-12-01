@@ -7,10 +7,7 @@ path="res://.import/OberarmRecths.png-3ef244128ff5bbce68714a9b71c1528c.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombieDarkSkin/OberarmRecths.png"
-source_md5="170b967cb06a24f09ba62a61e54d1c2b"
-
 dest_files=[ "res://.import/OberarmRecths.png-3ef244128ff5bbce68714a9b71c1528c.stex" ]
-dest_md5="8ced6e072aae5774afb9d57862713fce"
 
 [params]
 

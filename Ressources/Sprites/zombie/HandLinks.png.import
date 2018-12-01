@@ -7,10 +7,7 @@ path="res://.import/HandLinks.png-ad6b81e474a50121fe1f43b421a5a85e.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombie/HandLinks.png"
-source_md5="074b55d0219805350adafae81f8cf34f"
-
 dest_files=[ "res://.import/HandLinks.png-ad6b81e474a50121fe1f43b421a5a85e.stex" ]
-dest_md5="7ca13b51dccc7ab7cf09d121915f9239"
 
 [params]
 

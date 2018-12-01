@@ -7,10 +7,7 @@ path="res://.import/kopf.png-636a2538b33ad444f8a2a9141f6315e1.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombieDarkSkin/kopf.png"
-source_md5="1547a8681b362b850b5c647a7b56cf14"
-
 dest_files=[ "res://.import/kopf.png-636a2538b33ad444f8a2a9141f6315e1.stex" ]
-dest_md5="0d82824f948364224ace6df0cdf948e6"
 
 [params]
 

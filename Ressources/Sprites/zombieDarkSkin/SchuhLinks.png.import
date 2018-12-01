@@ -7,10 +7,7 @@ path="res://.import/SchuhLinks.png-9e1e9c48d88c154ed953a6d5585d91c1.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombieDarkSkin/SchuhLinks.png"
-source_md5="3d9e07815dbe211157c60e9450bd19d0"
-
 dest_files=[ "res://.import/SchuhLinks.png-9e1e9c48d88c154ed953a6d5585d91c1.stex" ]
-dest_md5="5b4d9402070eef9a9f7a532813ddd9d7"
 
 [params]
 

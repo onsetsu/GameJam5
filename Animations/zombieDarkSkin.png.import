@@ -7,10 +7,7 @@ path="res://.import/zombieDarkSkin.png-8ce0d4d1b4890b93aa1c3a2594ee361b.stex"
 [deps]
 
 source_file="res://Animations/zombieDarkSkin.png"
-source_md5="d3e90ffd2cffa57eda19f7731791368e"
-
 dest_files=[ "res://.import/zombieDarkSkin.png-8ce0d4d1b4890b93aa1c3a2594ee361b.stex" ]
-dest_md5="268df27b595e635e2c88cb83f70faa17"
 
 [params]
 

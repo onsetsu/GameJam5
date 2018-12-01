@@ -7,10 +7,7 @@ path="res://.import/NFF-bad-whistle.wav-457a5644ce1197370996dd6c4b7f8d21.sample"
 [deps]
 
 source_file="res://Ressources/Sound/NFF-bad-whistle.wav"
-source_md5="3cb64d6281677d2b3ec7aef14ee64f1b"
-
 dest_files=[ "res://.import/NFF-bad-whistle.wav-457a5644ce1197370996dd6c4b7f8d21.sample" ]
-dest_md5="bd8e31e9fd6b3154a50f0949602915fa"
 
 [params]
 
