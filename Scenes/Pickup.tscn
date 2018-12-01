@@ -13,7 +13,7 @@ radius = 15.0
 custom_solver_bias = 0.0
 radius = 20.0
 
-[node name="Pickup" type="RigidBody2D"]
+[node name="Pickup" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 4
@@ -30,7 +30,7 @@ contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
-linear_damp = 1.0
+linear_damp = 2.0
 angular_velocity = 0.0
 angular_damp = 10.0
 script = ExtResource( 1 )
