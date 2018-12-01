@@ -83,7 +83,7 @@ position = Vector2( 384, 832 )
 [node name="EndingArea" parent="." index="6" instance=ExtResource( 5 )]
 
 position = Vector2( 139.908, 320.025 )
-nextLevel = 1
+nextLevel = 4
 
 [node name="BackgroundSound" parent="." index="7" instance=ExtResource( 6 )]
 

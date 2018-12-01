@@ -189,6 +189,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="EndingArea" parent="." index="18" instance=ExtResource( 10 )]
 
 position = Vector2( 3340, 810 )
-nextLevel = 4
+nextLevel = 1
 
 
