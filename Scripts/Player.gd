@@ -21,6 +21,16 @@ func _ready():
 func process_flashlight(delta):
 	$camera.set_position(Vector2(300, 0) if $Flashlight.is_activated() else Vector2(0,0))
 
+func is_moving():
+	return velocity.length() > stepVelocity
+
+
+func process_movement_animations():
+	if is_moving():
+		if !$Sprite/AnimationPlayer.is_playing():
+			$Sprite/AnimationPlayer.play('Walking')
+	else:
+		$Sprite/AnimationPlayer.stop(false)
 
 func process_movement_input(delta):
 	var direction = Vector2(0,0)
@@ -39,6 +49,8 @@ func process_movement_input(delta):
 	velocity = velocity.clamped(maxSpeed)
 	if direction.length() == 0:
 		process_dampening(delta)
+		
+	process_movement_animations()
 	
 func process_action_input():
 	if Input.is_action_just_pressed('throw_pickup'):
@@ -63,9 +75,10 @@ func emit_sound(type):
 	for enemy in get_tree().get_nodes_in_group('enemy'):
 		enemy._sound_emitted(self.get_global_position(), type)
 
+
 func emit_step_sounds(delta):
 	stepTimer -= delta
-	if velocity.abs().length() > stepVelocity && stepTimer <= 0:
+	if is_moving() && stepTimer <= 0:
 		emit_sound('step')
 		print('step')
 		stepTimer = stepTime
@@ -77,6 +90,11 @@ func _physics_process(delta):
 	emit_step_sounds(delta)
 	velocity = self.move_and_slide(velocity)
 
+
+
+
+
+#----------------- Pickup handling -------------------
 func has_pickup():
 	return $GrabbingHand.get_child_count() > 0
 
