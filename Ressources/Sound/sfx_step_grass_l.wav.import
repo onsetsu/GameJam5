@@ -7,10 +7,7 @@ path="res://.import/sfx_step_grass_l.wav-9bcb85beed21c907a6cd66a6d1bee16d.sample
 [deps]
 
 source_file="res://Ressources/Sound/sfx_step_grass_l.wav"
-source_md5="353a13d946bdffb51c20e568156ffdc3"
-
 dest_files=[ "res://.import/sfx_step_grass_l.wav-9bcb85beed21c907a6cd66a6d1bee16d.sample" ]
-dest_md5="7cf624ad8a6b637978a509fe2c979bd9"
 
 [params]
 

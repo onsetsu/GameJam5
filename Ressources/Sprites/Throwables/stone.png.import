@@ -7,10 +7,7 @@ path="res://.import/stone.png-57a1002fb90f594eb7ba689dae9db404.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Throwables/stone.png"
-source_md5="18c146ac4a0e6d681cd2ceafafe951de"
-
 dest_files=[ "res://.import/stone.png-57a1002fb90f594eb7ba689dae9db404.stex" ]
-dest_md5="e4696cb5fa467361ceeed734727313d2"
 
 [params]
 

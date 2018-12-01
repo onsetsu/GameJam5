@@ -7,10 +7,7 @@ path="res://.import/zombie.png-a7abe661963e6e75b0caf31e5a5bb869.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombie/zombie.png"
-source_md5="9dec8a6a70497b8d70adef97678b593b"
-
 dest_files=[ "res://.import/zombie.png-a7abe661963e6e75b0caf31e5a5bb869.stex" ]
-dest_md5="3f8d2f3c9633a0da9a750b6aab499677"
 
 [params]
 

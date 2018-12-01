@@ -7,10 +7,7 @@ path="res://.import/OberarmRechts.png-4e279fe66366fedba2c71067ec2f3552.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombie/OberarmRechts.png"
-source_md5="c1ee489f49919eb0a476705d70344188"
-
 dest_files=[ "res://.import/OberarmRechts.png-4e279fe66366fedba2c71067ec2f3552.stex" ]
-dest_md5="f5e17c1859691d3678849c8e0f204500"
 
 [params]
 

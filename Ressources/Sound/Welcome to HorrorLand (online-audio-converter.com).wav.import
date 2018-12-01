@@ -7,10 +7,7 @@ path="res://.import/Welcome to HorrorLand (online-audio-converter.com).wav-00c0b
 [deps]
 
 source_file="res://Ressources/Sound/Welcome to HorrorLand (online-audio-converter.com).wav"
-source_md5="5bcb080422e2d6e50265834a88728931"
-
 dest_files=[ "res://.import/Welcome to HorrorLand (online-audio-converter.com).wav-00c0b28671877bbee5dd90fa9fa52a32.sample" ]
-dest_md5="282d3642d485524d7814246254045e0a"
 
 [params]
 

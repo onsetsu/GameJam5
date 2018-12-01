@@ -7,10 +7,7 @@ path="res://.import/NFF-thud.wav-6e670b8f672200433a434a0af10be91b.sample"
 [deps]
 
 source_file="res://Ressources/Sound/NFF-thud.wav"
-source_md5="3415f6165e1e0342b3b3420a4da3d646"
-
 dest_files=[ "res://.import/NFF-thud.wav-6e670b8f672200433a434a0af10be91b.sample" ]
-dest_md5="d6799d912b72b64b2f64633a64e938af"
 
 [params]
 

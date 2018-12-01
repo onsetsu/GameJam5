@@ -7,10 +7,7 @@ path="res://.import/OberarmLinks.png-778ae6fb7ada3ab69dd7c39c325cb41e.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombie/OberarmLinks.png"
-source_md5="c26f64f9fd01c032cc43cae0658c8790"
-
 dest_files=[ "res://.import/OberarmLinks.png-778ae6fb7ada3ab69dd7c39c325cb41e.stex" ]
-dest_md5="dd6906c66113e6efd86692932eafe77b"
 
 [params]
 

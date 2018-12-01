@@ -7,10 +7,7 @@ path="res://.import/schulterRchts.png-5580ad1512464f7019db606757e17875.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombieDarkSkin/schulterRchts.png"
-source_md5="253dbeac2a7a37c92ba7b4cd687e8ffa"
-
 dest_files=[ "res://.import/schulterRchts.png-5580ad1512464f7019db606757e17875.stex" ]
-dest_md5="241c9b5217972993549ffa5b8422daa1"
 
 [params]
 

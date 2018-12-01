@@ -7,10 +7,7 @@ path="res://.import/schulterlinks.png-d2120d83b2e785f248d6d53aae12be2e.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombie/schulterlinks.png"
-source_md5="4ba6b7098ce94800280b78dea5a47293"
-
 dest_files=[ "res://.import/schulterlinks.png-d2120d83b2e785f248d6d53aae12be2e.stex" ]
-dest_md5="f6d7abce7d8f1c7eb95f9e9360f2aa24"
 
 [params]
 
