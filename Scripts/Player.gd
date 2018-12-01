@@ -8,6 +8,8 @@ var stepTime = 0.5
 var stepTimer = 0.5
 var stepVelocity = 1
 
+var stepSounds = [preload('res://Ressources/Sound/sfx_step_grass_r.wav'), preload('res://Ressources/Sound/sfx_step_grass_l.wav')]
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -80,7 +82,8 @@ func emit_step_sounds(delta):
 	stepTimer -= delta
 	if is_moving() && stepTimer <= 0:
 		emit_sound('step')
-		print('step')
+		$StepSoundPlayer.set_stream(stepSounds[randi() % stepSounds.size()])
+		$StepSoundPlayer.play(0)
 		stepTimer = stepTime
 
 func _physics_process(delta):

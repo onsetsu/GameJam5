@@ -24,6 +24,7 @@ func _on_PickupArea_body_entered(body):
 func _physics_process(delta):
 	if get_linear_velocity().abs().length() <= 15:
 		if shouldEmitBasicSound:
+			$BasicSoundPlayer.play()
 			emit_sound('basic')
 			shouldEmitBasicSound = false
 
