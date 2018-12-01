@@ -7,7 +7,10 @@ path="res://.import/SchuhLinks.png-4bf1c682e9d781aef2ea9fb96e7fc19a.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/SchuhLinks.png"
+source_md5="636c246be9ec5ea4a069998154bc107f"
+
 dest_files=[ "res://.import/SchuhLinks.png-4bf1c682e9d781aef2ea9fb96e7fc19a.stex" ]
+dest_md5="5a2af3f0e3cbcdf4d7c65c63b881fc93"
 
 [params]
 

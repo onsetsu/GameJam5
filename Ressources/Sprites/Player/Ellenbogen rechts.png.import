@@ -7,7 +7,10 @@ path="res://.import/Ellenbogen rechts.png-9cedebba1eb53b5ddc4f83d5a75decbf.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/Ellenbogen rechts.png"
+source_md5="51d4717462290e22c920cf0e5c22ae21"
+
 dest_files=[ "res://.import/Ellenbogen rechts.png-9cedebba1eb53b5ddc4f83d5a75decbf.stex" ]
+dest_md5="d14e26eece14c0dbb4ccaaf1a907a198"
 
 [params]
 

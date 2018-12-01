@@ -7,7 +7,10 @@ path="res://.import/schulterRechts.png-40366a59fcba89e4c54ee372b4b62da6.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/schulterRechts.png"
+source_md5="67ae1655970838dc5952ce590d6dd434"
+
 dest_files=[ "res://.import/schulterRechts.png-40366a59fcba89e4c54ee372b4b62da6.stex" ]
+dest_md5="b979c8c0a6e5447e497faf8a853656d5"
 
 [params]
 

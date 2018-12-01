@@ -7,7 +7,10 @@ path="res://.import/Hand.png-cdd5224bec96d564be1c3ed701e6349f.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/Hand.png"
+source_md5="ac3b380c259dac07abf54d35d2120284"
+
 dest_files=[ "res://.import/Hand.png-cdd5224bec96d564be1c3ed701e6349f.stex" ]
+dest_md5="2d0c61b20d6225b172c305066498d91d"
 
 [params]
 

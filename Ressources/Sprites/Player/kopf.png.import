@@ -7,7 +7,10 @@ path="res://.import/kopf.png-c30daf13e1c82eb79b85f30042099f0a.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/kopf.png"
+source_md5="5ad762d5df95cd9ae3c216c9cf26ea61"
+
 dest_files=[ "res://.import/kopf.png-c30daf13e1c82eb79b85f30042099f0a.stex" ]
+dest_md5="9f68f99359e06ce82ecf75e6fd476217"
 
 [params]
 
