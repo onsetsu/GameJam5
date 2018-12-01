@@ -30,7 +30,7 @@ tracks/0/keys = {
 "values": [ 0, 29 ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 2
@@ -76,7 +76,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Flashlight" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 25.1815, 15.1389 )
+position = Vector2( 33.7875, 15.4463 )
 rotation = 3.14159
 
 [node name="Sprite" type="Sprite" parent="." index="4"]
