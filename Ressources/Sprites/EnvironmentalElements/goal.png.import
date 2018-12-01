@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/goal.png-92c760ab9310f1eb4997d9cb2138e2be.stex"
+
+[deps]
+
+source_file="res://Ressources/Sprites/EnvironmentalElements/goal.png"
+<<<<<<< HEAD
+source_md5="445d0a91f04624a51fae5c8ceecbb56e"
+
+dest_files=[ "res://.import/goal.png-92c760ab9310f1eb4997d9cb2138e2be.stex" ]
+dest_md5="c0bb6f866769a285cc93c44e26e6ec38"
+=======
+dest_files=[ "res://.import/goal.png-92c760ab9310f1eb4997d9cb2138e2be.stex" ]
+>>>>>>> eb0d5b8709b1e42feb3de5b9aae9e25393b22120
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
