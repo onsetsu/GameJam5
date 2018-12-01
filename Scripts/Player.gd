@@ -9,7 +9,7 @@ var stepTimer = 0.5
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	pass
+	add_to_group('player')
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
