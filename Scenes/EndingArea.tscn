@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/EndingArea.gd" type="Script" id=1]
+[ext_resource path="res://Ressources/Sprites/EnvironmentalElements/goal.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -27,6 +28,10 @@ nextLevel = 2
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
+
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="." to="." method="_on_EndingArea_body_entered"]
 

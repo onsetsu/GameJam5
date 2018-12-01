@@ -22,7 +22,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 175.136, 334.21, 0, 0, 0, 0, 821.774, 316.581 )
 }
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -175,6 +175,5 @@ _sections_unfolded = [ "Material", "Rect", "Size Flags", "Visibility", "custom_c
 [node name="EndingArea" parent="." index="18" instance=ExtResource( 8 )]
 
 position = Vector2( 1410.63, 644.925 )
-nextLevel = 2
 
 
