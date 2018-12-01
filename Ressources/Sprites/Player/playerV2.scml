@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0">
+        <file id="0" name="kleidung.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="Hand.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="2" name="kopf.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="3" name="ArmLinks.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="4" name="Ellenbogen rechts.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="5" name="SchuhLinks.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="6" name="SchuhRechts.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+        <file id="7" name="schulterRechts.png" width="256" height="256" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <animation id="0" name="NewAnimation" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="6" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="5" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="4" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="0" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="1" key="0" z_index="5"/>
+                    <object_ref id="6" timeline="7" key="0" z_index="6"/>
+                    <object_ref id="7" timeline="2" key="0" z_index="7"/>
+                </key>
+                <key id="1" time="499">
+                    <object_ref id="0" timeline="6" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="5" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="4" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="0" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="1" key="0" z_index="5"/>
+                    <object_ref id="6" timeline="7" key="1" z_index="6"/>
+                    <object_ref id="7" timeline="2" key="1" z_index="7"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="kleidung">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-121" y="136"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="Hand">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-121" y="142"/>
+                </key>
+            </timeline>
+            <timeline id="2" name="kopf">
+                <key id="0" spin="-1">
+                    <object folder="0" file="2" x="-117.609756" y="134.390244" angle="1"/>
+                </key>
+                <key id="1" time="499">
+                    <object folder="0" file="2" x="-112.121951" y="138.658537" angle="358"/>
+                </key>
+            </timeline>
+            <timeline id="3" name="ArmLinks">
+                <key id="0">
+                    <object folder="0" file="3" x="-123.219512" y="136"/>
+                </key>
+                <key id="1" time="499" spin="-1">
+                    <object folder="0" file="3" x="-124.439024" y="132.341463" angle="1"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="Ellenbogen rechts">
+                <key id="0" spin="0">
+                    <object folder="0" file="4" x="-121.547233" y="134.140678"/>
+                </key>
+                <key id="1" time="499" spin="0">
+                    <object folder="0" file="4" x="-123.376501" y="145.116288"/>
+                </key>
+            </timeline>
+            <timeline id="5" name="SchuhLinks">
+                <key id="0" spin="0">
+                    <object folder="0" file="5" x="-109.146341" y="123.780488"/>
+                </key>
+                <key id="1" time="499" spin="0">
+                    <object folder="0" file="5" x="-108.536585" y="110.97561"/>
+                </key>
+            </timeline>
+            <timeline id="6" name="SchuhRechts">
+                <key id="0" spin="0">
+                    <object folder="0" file="6" x="-124.390244" y="114.634146"/>
+                </key>
+                <key id="1" time="499" spin="0">
+                    <object folder="0" file="6" x="-122.560976" y="126.829268"/>
+                </key>
+            </timeline>
+            <timeline id="7" name="schulterRechts">
+                <key id="0" spin="0">
+                    <object folder="0" file="7" x="-115.853659" y="131.707317"/>
+                </key>
+                <key id="1" time="499" spin="0">
+                    <object folder="0" file="7" x="-115.243902" y="139.02439"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
