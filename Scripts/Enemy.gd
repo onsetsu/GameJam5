@@ -10,7 +10,7 @@ onready var states_map = {
     'searching': $States/searching,
     'waiting': $States/waiting
 }
-var direction = Vector2(0,-1)
+var direction = Vector2(1,0)
 
 export(NodePath) var idle_path_init = null
 export var speed = 70
@@ -58,7 +58,7 @@ func _sound_emitted(pos, type):
     
     if current_state == $States/chasing: return
     if is_pickup_type(type) && (position - pos).length() > 500: return
-    if type == 'step' && (position - (pos + (-direction * 100))).length() > 200: return
+    if type == 'step' && (position - (pos + (-direction * 70))).length() > 140: return
     
     $States/searching.target_pos = pos
     if type == 'step':

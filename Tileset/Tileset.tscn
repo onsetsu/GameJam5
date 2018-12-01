@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Ressources/Sprites/Wall/wallInside.png" type="Texture" id=1]
 [ext_resource path="res://Ressources/Sprites/Wall/wallAbove.png" type="Texture" id=2]
@@ -20,18 +20,108 @@
 [ext_resource path="res://Ressources/Sprites/Wall/wallEdgeLowerLeft.png" type="Texture" id=18]
 [ext_resource path="res://Ressources/Sprites/Wall/wallLeftAndRight.png" type="Texture" id=19]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
-
-[sub_resource type="OccluderPolygon2D" id=2]
+[sub_resource type="OccluderPolygon2D" id=21]
 
 closed = true
 cull_mode = 0
-polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+polygon = PoolVector2Array( -128, -128, 128, -128, 128, 128, -128, 128 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[sub_resource type="RectangleShape2D" id=22]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=23]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=14]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=15]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=16]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=17]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=18]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=19]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=20]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 128 )
+
+[node name="Node2D" type="Node2D"]
 
 __meta__ = {
 "_edit_lock_": true
@@ -39,666 +129,571 @@ __meta__ = {
 
 [node name="InnnerWall" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
-position = Vector2( 190, 270 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( -30, 430 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="InnnerWall" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="InnnerWall" index="0"]
 
-position = Vector2( 7.62939e-06, -7.62939e-06 )
-scale = Vector2( 4, 4 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="InnnerWall" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InnnerWall/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="InnnerWall" index="1"]
-
-position = Vector2( 7.62939e-06, -7.62939e-06 )
-scale = Vector2( 4, 4 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 22 )
 
 [node name="WallTop" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
-position = Vector2( 190, 190 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( -30, 130 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallTop" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallTop" index="0"]
 
-position = Vector2( 7.62939e-06, -7.62939e-06 )
-scale = Vector2( 4, 4 )
+position = Vector2( -7.62939e-06, 21.3333 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallTop" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallTop" index="1"]
-
-position = Vector2( -7.62939e-06, 21.3333 )
-scale = Vector2( 4, 3.33333 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 23 )
 
 [node name="WallEndingTop" type="Sprite" parent="." index="2"]
 
-editor/display_folded = true
-position = Vector2( 190, 30 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( -30, -170 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallEndingTop" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallEndingTop" index="0"]
 
-position = Vector2( -7.62939e-06, 2.67029e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( 0, 21.3334 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallEndingTop" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallEndingTop/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallEndingTop" index="1"]
-
-position = Vector2( 0, 21.3334 )
-scale = Vector2( 2.66667, 3.33333 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 4 )
 
 [node name="WallBottom" type="Sprite" parent="." index="3"]
 
-editor/display_folded = true
-position = Vector2( 190, 350 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( -40, 740 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallBottom" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallBottom" index="0"]
 
-position = Vector2( 7.62939e-06, 3.05176e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( 7.62939e-06, -21.3334 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallBottom" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallBottom" index="1"]
-
-position = Vector2( 7.62939e-06, -21.3334 )
-scale = Vector2( 4, 3.33333 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 5 )
 
 [node name="WallEndingBottom2" type="Sprite" parent="." index="4"]
 
-editor/display_folded = true
-position = Vector2( 190, 430 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( -40, 1030 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallEndingBottom2" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallEndingBottom2" index="0"]
 
-position = Vector2( 7.62939e-06, 5.34058e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( 0, -21.3333 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallEndingBottom2" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallEndingBottom2/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallEndingBottom2" index="1"]
-
-position = Vector2( 0, -21.3333 )
-scale = Vector2( 2.66667, 3.33333 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 6 )
 
 [node name="WallLeft" type="Sprite" parent="." index="5"]
 
-editor/display_folded = true
-position = Vector2( 110, 270 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( -330, 430 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallLeft" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeft" index="0"]
 
-position = Vector2( -1.14441e-05, -7.62939e-06 )
-scale = Vector2( 4, 4 )
+position = Vector2( 21.3333, 1.14441e-05 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallLeft" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeft" index="1"]
-
-position = Vector2( 21.3333, 1.14441e-05 )
-scale = Vector2( 3.33333, 4 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 7 )
 
 [node name="WallEndingLeft3" type="Sprite" parent="." index="6"]
 
-editor/display_folded = true
-position = Vector2( 30, 270 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( -660, 450 )
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallEndingLeft3" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallEndingLeft3" index="0"]
 
-position = Vector2( -1.52588e-05, -7.62939e-06 )
-scale = Vector2( 4, 4 )
+position = Vector2( 21.3333, 1.90735e-06 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallEndingLeft3" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallEndingLeft3/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallEndingLeft3" index="1"]
-
-position = Vector2( 21.3333, 1.90735e-06 )
-scale = Vector2( 3.33333, 2.66667 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 8 )
 
 [node name="WallRight" type="Sprite" parent="." index="7"]
 
-editor/display_folded = true
-position = Vector2( 270, 270 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 270, 430 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallRight" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRight" index="0"]
 
-position = Vector2( 4.19617e-05, -7.62939e-06 )
-scale = Vector2( 4, 4 )
+position = Vector2( -21.3334, -3.8147e-06 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallRight" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRight" index="1"]
-
-position = Vector2( -21.3334, -3.8147e-06 )
-scale = Vector2( 3.33333, 4 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 9 )
 
 [node name="WallRightBottom" type="Sprite" parent="." index="8"]
 
-editor/display_folded = true
-position = Vector2( 270, 350 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 260, 740 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallRightBottom" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRightBottom" index="0"]
 
-position = Vector2( 3.05176e-05, 3.05176e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( -21.3334, -21.3334 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallRightBottom" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRightBottom/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRightBottom" index="1"]
-
-position = Vector2( -21.3334, -21.3334 )
-scale = Vector2( 3.33333, 3.33333 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 10 )
 
 [node name="WallInnerLowerLeft" type="Sprite" parent="." index="9"]
 
-editor/display_folded = true
-position = Vector2( 510, 450 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 850, 730 )
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallInnerLowerLeft" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallInnerLowerLeft" index="0"]
 
-position = Vector2( 3.05176e-05, 3.05176e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( 3.24249e-05, 3.24249e-05 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallInnerLowerLeft" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallInnerLowerLeft/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallInnerLowerLeft" index="1"]
-
-position = Vector2( 3.24249e-05, 3.24249e-05 )
-scale = Vector2( 4, 4 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 11 )
 
 [node name="WallInnerLowerLeft2" type="Sprite" parent="." index="10"]
 
-editor/display_folded = true
-position = Vector2( 430, 450 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 570, 740 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallInnerLowerLeft2" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallInnerLowerLeft2" index="0"]
 
-position = Vector2( 3.05176e-05, 3.05176e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( 3.24249e-05, 3.24249e-05 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallInnerLowerLeft2" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallInnerLowerLeft2/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallInnerLowerLeft2" index="1"]
-
-position = Vector2( 3.24249e-05, 3.24249e-05 )
-scale = Vector2( 4, 4 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 12 )
 
 [node name="WallInnerLowerLeft3" type="Sprite" parent="." index="11"]
 
-editor/display_folded = true
-position = Vector2( 430, 530 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 570, 1020 )
 texture = ExtResource( 12 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallInnerLowerLeft3" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallInnerLowerLeft3" index="0"]
 
-position = Vector2( 3.05176e-05, 3.05176e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( 3.24249e-05, 3.24249e-05 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallInnerLowerLeft3" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallInnerLowerLeft3/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallInnerLowerLeft3" index="1"]
-
-position = Vector2( 3.24249e-05, 3.24249e-05 )
-scale = Vector2( 4, 4 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 13 )
 
 [node name="WallInnerLowerLeft4" type="Sprite" parent="." index="12"]
 
-editor/display_folded = true
-position = Vector2( 510, 530 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 860, 1030 )
 texture = ExtResource( 13 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallInnerLowerLeft4" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallInnerLowerLeft4" index="0"]
 
-position = Vector2( 3.05176e-05, 3.05176e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( 3.24249e-05, 3.24249e-05 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallInnerLowerLeft4" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallInnerLowerLeft4/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallInnerLowerLeft4" index="1"]
-
-position = Vector2( 3.24249e-05, 3.24249e-05 )
-scale = Vector2( 4, 4 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 14 )
 
 [node name="WallAboveAndBelow2" type="Sprite" parent="." index="13"]
 
-editor/display_folded = true
-position = Vector2( 350, 270 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 568, -182 )
 texture = ExtResource( 14 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallAboveAndBelow2" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallAboveAndBelow2" index="0"]
 
-position = Vector2( 3.05176e-05, -1.90735e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( -1.90735e-06, 2.28882e-05 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallAboveAndBelow2" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallAboveAndBelow2/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallAboveAndBelow2" index="1"]
-
-position = Vector2( -1.90735e-06, 2.28882e-05 )
-scale = Vector2( 4, 2.66667 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 15 )
 
 [node name="WallEndingRight2" type="Sprite" parent="." index="14"]
 
-editor/display_folded = true
-position = Vector2( 430, 270 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 570, 430 )
 texture = ExtResource( 15 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallEndingRight2" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallEndingRight2" index="0"]
 
-position = Vector2( 3.05176e-05, -1.90735e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( -21.3333, 2.28882e-05 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallEndingRight2" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallEndingRight2/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallEndingRight2" index="1"]
-
-position = Vector2( -21.3333, 2.28882e-05 )
-scale = Vector2( 3.33333, 2.66667 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 16 )
 
 [node name="WallRightTop" type="Sprite" parent="." index="15"]
 
-editor/display_folded = true
-position = Vector2( 300, 170 )
-scale = Vector2( 0.34375, 0.34375 )
+position = Vector2( 270, 130 )
 texture = ExtResource( 16 )
 _sections_unfolded = [ "Region", "Transform", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallRightTop" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRightTop" index="0"]
 
-position = Vector2( 4.19617e-05, -1.14441e-05 )
-scale = Vector2( 4, 4 )
+position = Vector2( -21.3333, 21.3333 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallRightTop" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRightTop/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallRightTop" index="1"]
-
-position = Vector2( -21.3333, 21.3333 )
-scale = Vector2( 3.33334, 3.33333 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 17 )
 
 [node name="WallLeftTop" type="Sprite" parent="." index="16"]
 
-editor/display_folded = true
-position = Vector2( 110, 190 )
-scale = Vector2( 0.231934, 0.231934 )
+position = Vector2( -333.533, 131.42 )
 texture = ExtResource( 17 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallLeftTop" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeftTop" index="0"]
 
-position = Vector2( -3.8147e-06, -3.8147e-06 )
-scale = Vector2( 4.04211, 4.0421 )
+position = Vector2( 21.5579, 21.5579 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallLeftTop" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeftTop/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeftTop" index="1"]
-
-position = Vector2( 21.5579, 21.5579 )
-scale = Vector2( 3.36842, 3.36842 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 18 )
 
 [node name="WallLeftBottom" type="Sprite" parent="." index="17"]
 
-editor/display_folded = true
-position = Vector2( 110, 350 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( -330, 730 )
 texture = ExtResource( 18 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallLeftBottom" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeftBottom" index="0"]
 
-position = Vector2( -7.62939e-06, 7.62939e-06 )
-scale = Vector2( 4, 4 )
+position = Vector2( 21.3333, -21.3334 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallLeftBottom" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeftBottom/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallLeftBottom" index="1"]
-
-position = Vector2( 21.3333, -21.3334 )
-scale = Vector2( 3.33333, 3.33333 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 19 )
 
 [node name="WallAboveAndBelow" type="Sprite" parent="." index="18"]
 
-editor/display_folded = true
-position = Vector2( 190, 110 )
-scale = Vector2( 0.234375, 0.234375 )
+position = Vector2( 898, -182 )
 texture = ExtResource( 19 )
 _sections_unfolded = [ "Region", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallAboveAndBelow" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WallAboveAndBelow" index="0"]
 
-position = Vector2( -7.62939e-06, 7.62939e-06 )
-scale = Vector2( 4, 4 )
+position = Vector2( -2.09808e-05, 5.72205e-06 )
+occluder = SubResource( 21 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallAboveAndBelow" index="1"]
+
 input_pickable = false
 collision_layer = 1
-collision_mask = 14
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallAboveAndBelow/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="WallAboveAndBelow" index="1"]
-
-position = Vector2( -2.09808e-05, 5.72205e-06 )
-scale = Vector2( 2.66667, 4 )
-occluder = SubResource( 2 )
-light_mask = 1
+shape = SubResource( 20 )
 
 

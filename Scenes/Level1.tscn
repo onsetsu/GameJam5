@@ -1,12 +1,14 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Sprites/Background/muddySomething.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/nav_map.gd" type="Script" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Pickup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Tileset/Tileset.res" type="TileSet" id=5]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Pickup.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/JustLight.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -63,7 +65,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 125.561, 422.007, 0, 0, 0, 0, 392.05, 416.455, 0, 0, 0, 0, 401.303, 205.485, 0, 0, 0, 0, 110.756, 201.784 )
 }
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -75,11 +77,7 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 2300, 2300 )
 _sections_unfolded = [ "Region", "Transform" ]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="1"]
-
-color = Color( 0.0351563, 0.0296631, 0.0296631, 0.966863 )
-
-[node name="nav_map" type="Navigation2D" parent="." index="2"]
+[node name="nav_map" type="Navigation2D" parent="." index="1"]
 
 script = ExtResource( 3 )
 
@@ -89,7 +87,7 @@ position = Vector2( -4.46094, 7.29208 )
 navpoly = SubResource( 1 )
 enabled = true
 
-[node name="NinePatchRect" type="NinePatchRect" parent="." index="3"]
+[node name="NinePatchRect" type="NinePatchRect" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -129,7 +127,7 @@ position = Vector2( 826.388, 25.3284 )
 scale = Vector2( 1.91459, 1 )
 shape = SubResource( 2 )
 
-[node name="NinePatchRect4" type="NinePatchRect" parent="." index="4"]
+[node name="NinePatchRect4" type="NinePatchRect" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -169,7 +167,7 @@ position = Vector2( 823.133, 28 )
 scale = Vector2( 5.81346, 1 )
 shape = SubResource( 3 )
 
-[node name="NinePatchRect3" type="NinePatchRect" parent="." index="5"]
+[node name="NinePatchRect3" type="NinePatchRect" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -210,7 +208,7 @@ position = Vector2( 13.9389, 317.732 )
 scale = Vector2( 0.118805, 10.8868 )
 shape = SubResource( 2 )
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="." index="6"]
+[node name="NinePatchRect2" type="NinePatchRect" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -250,7 +248,7 @@ position = Vector2( 42.0631, 136.933 )
 scale = Vector2( 4.23562, 11.5333 )
 shape = SubResource( 4 )
 
-[node name="NinePatchRect9" type="NinePatchRect" parent="." index="7"]
+[node name="NinePatchRect9" type="NinePatchRect" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -291,7 +289,7 @@ position = Vector2( 50.4141, 140.273 )
 scale = Vector2( 4.23562, 11.5333 )
 shape = SubResource( 4 )
 
-[node name="NinePatchRect10" type="NinePatchRect" parent="." index="8"]
+[node name="NinePatchRect10" type="NinePatchRect" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -331,7 +329,7 @@ position = Vector2( 40.3928, 126.912 )
 scale = Vector2( 4.23562, 11.5333 )
 shape = SubResource( 4 )
 
-[node name="NinePatchRect6" type="NinePatchRect" parent="." index="9"]
+[node name="NinePatchRect6" type="NinePatchRect" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -370,7 +368,7 @@ bounce = 0.0
 position = Vector2( 209.12, 129.543 )
 shape = SubResource( 5 )
 
-[node name="NinePatchRect7" type="NinePatchRect" parent="." index="10"]
+[node name="NinePatchRect7" type="NinePatchRect" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -409,7 +407,7 @@ bounce = 0.0
 position = Vector2( 205.419, 116.589 )
 shape = SubResource( 6 )
 
-[node name="NinePatchRect5" type="NinePatchRect" parent="." index="11"]
+[node name="NinePatchRect5" type="NinePatchRect" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -449,7 +447,7 @@ position = Vector2( 41.0643, 120.29 )
 scale = Vector2( 1.23422, 1 )
 shape = SubResource( 7 )
 
-[node name="NinePatchRect8" type="NinePatchRect" parent="." index="12"]
+[node name="NinePatchRect8" type="NinePatchRect" parent="." index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -489,11 +487,33 @@ position = Vector2( 88.2549, 75.8754 )
 scale = Vector2( 0.898961, 1 )
 shape = SubResource( 8 )
 
-[node name="Player" parent="." index="13" instance=ExtResource( 5 )]
+[node name="TileMap" type="TileMap" parent="." index="12"]
 
-position = Vector2( 263.531, 136.472 )
+scale = Vector2( 0.25, 0.25 )
+mode = 0
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 256, 256 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 16, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 15, 0, 8, 16, 0, 65536, 7, 0, 65543, 5, 0, 65544, 7, 0, 131072, 7, 0, 131079, 5, 0, 131080, 7, 0, 196608, 7, 0, 196615, 13, 0, 196616, 8, 0, 262144, 7, 0, 262146, 12, 0, 262147, 1, 0, 262148, 11, 0, 327680, 7, 0, 327682, 13, 0, 327683, 3, 0, 327684, 8, 0, 393216, 7, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="Enemy" parent="." index="14" instance=ExtResource( 6 )]
+[node name="Player" parent="." index="13" instance=ExtResource( 6 )]
+
+position = Vector2( 246.95, 137.979 )
+
+[node name="Enemy" parent="." index="14" instance=ExtResource( 7 )]
 
 position = Vector2( 613.587, 482.036 )
 idle_path_init = NodePath("../Enemy_Path")
@@ -504,7 +524,7 @@ scale = Vector2( 1.04945, 0.987654 )
 curve = SubResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Enemy2" parent="." index="16" instance=ExtResource( 6 )]
+[node name="Enemy2" parent="." index="16" instance=ExtResource( 7 )]
 
 position = Vector2( 97.854, 303.435 )
 idle_path_init = NodePath("../Enemy_Path2")
@@ -514,16 +534,32 @@ idle_path_init = NodePath("../Enemy_Path2")
 curve = SubResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Enemy3" parent="." index="18" instance=ExtResource( 6 )]
+[node name="Enemy3" parent="." index="18" instance=ExtResource( 7 )]
 
 position = Vector2( 1352.44, 259.541 )
 
-[node name="Pickup" parent="." index="19" instance=ExtResource( 7 )]
+[node name="Pickup" parent="." index="19" instance=ExtResource( 8 )]
 
 position = Vector2( 400.695, 146.459 )
 
-[node name="Pickup2" parent="." index="20" instance=ExtResource( 7 )]
+[node name="Pickup2" parent="." index="20" instance=ExtResource( 8 )]
 
 position = Vector2( 1507.63, 141.645 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="21"]
+
+color = Color( 0.0351563, 0.0296631, 0.0296631, 0.966863 )
+
+[node name="Node2D" parent="." index="22" instance=ExtResource( 9 )]
+
+position = Vector2( 427.492, 86.9789 )
+
+[node name="Node2D2" parent="." index="23" instance=ExtResource( 9 )]
+
+position = Vector2( 92.5307, 92.5307 )
+
+[node name="Node2D3" parent="." index="24" instance=ExtResource( 9 )]
+
+position = Vector2( 834.627, 297.949 )
 
 
