@@ -1,16 +1,54 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Enemy/idle.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Enemy/chasing.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/Enemy/searching.gd" type="Script" id=5]
-[ext_resource path="res://Scripts/waiting.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Enemy/idle.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Enemy/chasing.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Enemy/searching.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/waiting.gd" type="Script" id=5]
+[ext_resource path="res://Animations/zombieDarkSkin.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "standing"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "walking"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 29 ]
+}
 
 [node name="KinematicBody2D" type="KinematicBody2D" index="0"]
 
@@ -22,32 +60,51 @@ script = ExtResource( 1 )
 idle_path_init = null
 speed = 50
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
-
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 scale = Vector2( 3.44411, 3.44411 )
 shape = SubResource( 1 )
 
-[node name="States" type="Node" parent="." index="2"]
+[node name="States" type="Node" parent="." index="1"]
 
 [node name="idle" type="Node" parent="States" index="0"]
 
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 idle_path_time = 4
 
 [node name="chasing" type="Node" parent="States" index="1"]
 
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 
 [node name="searching" type="Node" parent="States" index="2"]
 
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 
 [node name="waiting" type="Node" parent="States" index="3"]
 
-script = ExtResource( 6 )
+script = ExtResource( 5 )
+
+[node name="rotation" type="Node2D" parent="." index="2"]
+
+[node name="Zombie" type="Sprite" parent="rotation" index="0"]
+
+rotation = 1.5708
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 6 )
+vframes = 6
+hframes = 5
+region_rect = Rect2( 0, 0, 0, 209 )
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="rotation/Zombie" index="0"]
+
+root_node = NodePath("..")
+autoplay = "walking"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/standing = SubResource( 3 )
+anims/walking = SubResource( 2 )
+blend_times = [  ]
 
 
