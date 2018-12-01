@@ -2,13 +2,16 @@ extends Light2D
 
 var maxBattery = 5
 var battery
-var batteryRechargingFactor = 0.5
-var batteryRechargeDelay = 2
+var batteryRechargingFactor = 1.25
+var batteryRechargeDelay = 1.5
 var timeToRecharge
 
 func _ready():
 	timeToRecharge = batteryRechargeDelay
 	battery = maxBattery
+	$PointLight.set_color(get_color())
+	$CanvasLayer/BatteryStatus.set_max(maxBattery)
+	$CanvasLayer/BatteryStatus.set_min(0)
 
 
 func _process(delta):
@@ -21,6 +24,7 @@ func _process(delta):
 	battery = clamp(battery, -maxBattery, maxBattery)
 	set_energy(clamp(battery, 0, 1))
 	set_activated(flashlightActive)
+	$CanvasLayer/BatteryStatus.set_value(battery)
 
 
 func is_activated():
@@ -29,4 +33,5 @@ func is_activated():
 
 func set_activated(activation):
 	set_enabled(activation)
+	$PointLight.set_enabled(activation)
 
