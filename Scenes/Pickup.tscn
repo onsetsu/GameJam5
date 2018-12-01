@@ -30,7 +30,7 @@ contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
-linear_damp = 0.5
+linear_damp = 1.0
 angular_velocity = 0.0
 angular_damp = 10.0
 script = ExtResource( 1 )
@@ -62,6 +62,8 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Pickup_body_entered"]
 
 [connection signal="body_entered" from="PickupArea" to="." method="_on_PickupArea_body_entered"]
 

@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # class member variables go here, for example:
 var velocity = Vector2(0, 0);
-var speed = 200;
+var speed = 100;
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
