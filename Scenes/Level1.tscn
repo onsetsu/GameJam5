@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Sprites/Background/muddySomething.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Pickup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Tileset/Tileset.res" type="TileSet" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -63,7 +64,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 125.561, 422.007, 0, 0, 0, 0, 392.05, 416.455, 0, 0, 0, 0, 401.303, 205.485, 0, 0, 0, 0, 110.756, 201.784 )
 }
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -487,7 +488,7 @@ shape = SubResource( 8 )
 
 [node name="Player" parent="." index="12" instance=ExtResource( 5 )]
 
-position = Vector2( 263.531, 136.472 )
+position = Vector2( 246.95, 137.979 )
 
 [node name="Enemy" parent="." index="13" instance=ExtResource( 6 )]
 
@@ -524,6 +525,29 @@ position = Vector2( 1507.63, 141.645 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="20"]
 
+visible = false
 color = Color( 0.0351563, 0.0296631, 0.0296631, 0.966863 )
+
+[node name="TileMap" type="TileMap" parent="." index="21"]
+
+scale = Vector2( 0.25, 0.25 )
+mode = 0
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 256, 256 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 16, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 15, 0, 8, 16, 0, 65536, 7, 0, 65543, 5, 0, 65544, 7, 0, 131072, 7, 0, 131079, 5, 0, 131080, 7, 0, 196608, 7, 0, 196615, 13, 0, 196616, 8, 0, 262144, 7, 0, 262146, 12, 0, 262147, 1, 0, 262148, 11, 0, 327680, 7, 0, 327682, 13, 0, 327683, 3, 0, 327684, 8, 0, 393216, 7, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
 
 

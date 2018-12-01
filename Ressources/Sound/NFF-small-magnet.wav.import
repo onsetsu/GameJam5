@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/NFF-small-magnet.wav-0df090d9d2f5fe60c56e47fef3cb350b.sample"
+
+[deps]
+
+source_file="res://Ressources/Sound/NFF-small-magnet.wav"
+source_md5="bd8e7fc0eb10a26ec78b40f1ff0c1f00"
+
+dest_files=[ "res://.import/NFF-small-magnet.wav-0df090d9d2f5fe60c56e47fef3cb350b.sample" ]
+dest_md5="ef9414b58f05b799fca3248e52206929"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

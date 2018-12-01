@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/NFF-iron-tickle.wav-fe4752e71dbb87f488b47f1fc3e66997.sample"
+
+[deps]
+
+source_file="res://Ressources/Sound/NFF-iron-tickle.wav"
+source_md5="e73c8e8123e10f28619f416050066158"
+
+dest_files=[ "res://.import/NFF-iron-tickle.wav-fe4752e71dbb87f488b47f1fc3e66997.sample" ]
+dest_md5="a30b1a1a132c70237d8cb5d59b08c674"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
