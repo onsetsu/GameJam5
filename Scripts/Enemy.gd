@@ -12,7 +12,7 @@ onready var states_map = {
 }
 
 export(NodePath) var idle_path_init = null
-export var speed = 50
+export var speed = 70
 
 func _ready():
     add_to_group('enemy')
@@ -28,6 +28,15 @@ func navigate_to_point(p):
     $rotation.rotation = direction.angle()
     move_and_slide(direction * speed * current_state.speed_modifier)
 
+func length_to_point(p):
+    var path = nav_map.get_simple_path(position, p)
+    var length = 0
+    var current_point = path[0]
+    for i in range(path.size()):
+        length += (path[i] - current_point).length()
+        current_point = path[i]
+    return length
+    
 func _physics_process(delta):
     # state machine
     var state_name = current_state.update(self, delta)
@@ -41,5 +50,11 @@ func _change_state(state_name):
 
 func _sound_emitted(pos, type):
     if (position - pos).length() > 500: return
+    print(length_to_point(pos))
     $States/searching.target_pos = pos
     _change_state('searching')
+
+func _on_range_area_body_entered(body):
+    if body.is_in_group('player'):
+        get_tree().reload_current_scene()
+        print('YOU DIED')

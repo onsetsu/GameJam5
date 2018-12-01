@@ -62,7 +62,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 125.561, 422.007, 0, 0, 0, 0, 392.05, 416.455, 0, 0, 0, 0, 401.303, 205.485, 0, 0, 0, 0, 110.756, 201.784 )
 }
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -399,6 +399,7 @@ shape = SubResource( 8 )
 
 position = Vector2( 613.587, 482.036 )
 idle_path_init = NodePath("../Enemy_Path")
+speed = 70
 
 [node name="Enemy_Path" type="Path2D" parent="." index="10"]
 
@@ -410,6 +411,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 97.854, 303.435 )
 idle_path_init = NodePath("../Enemy_Path2")
+speed = 70
 
 [node name="Enemy_Path2" type="Path2D" parent="." index="12"]
 
@@ -423,6 +425,7 @@ position = Vector2( 237.567, 91.1451 )
 [node name="Enemy3" parent="." index="14" instance=ExtResource( 4 )]
 
 position = Vector2( 616.297, 111.902 )
+speed = 70
 
 [node name="Pickup" parent="." index="15" instance=ExtResource( 6 )]
 
