@@ -52,7 +52,7 @@ extents = Vector2( 94.2679, 73.4453 )
 
 bake_interval = 5.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 583.423, 311.11, 0, 0, 0, 0, 398.377, 129.137, 0, 0, 0, 0, 616.928, 283.004, 0, 0, 0, 0, 946.687, 299.867 )
+"points": PoolVector2Array( 0, 0, 0, 0, 408.146, 321.665, 0, 0, 0, 0, 564.112, 308.137, 0, 0, 0, 0, 742.358, 308.137, 0, 0, 0, 0, 946.687, 299.867 )
 }
 
 [sub_resource type="Curve2D" id=10]
@@ -418,7 +418,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="13" instance=ExtResource( 5 )]
 
-position = Vector2( 247.588, 91.1451 )
+position = Vector2( 237.567, 91.1451 )
 
 [node name="Enemy3" parent="." index="14" instance=ExtResource( 4 )]
 
@@ -427,5 +427,9 @@ position = Vector2( 616.297, 111.902 )
 [node name="Pickup" parent="." index="15" instance=ExtResource( 6 )]
 
 position = Vector2( 392.493, 509.406 )
+
+[node name="Pickup2" parent="." index="16" instance=ExtResource( 6 )]
+
+position = Vector2( 613.587, 482.036 )
 
 
