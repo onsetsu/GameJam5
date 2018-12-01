@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://LightSpike/light.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Flashlight.gd" type="Script" id=2]
+[ext_resource path="res://LightSpike/spot.png" type="Texture" id=3]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 
@@ -11,12 +12,13 @@ polygon = PoolVector2Array( -15, -5, 10, 0, 10, 0, -15, 5 )
 
 [node name="Flashlight" type="Light2D" index="0"]
 
+light_mask = 3
 enabled = true
 editor_only = false
 texture = ExtResource( 1 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
-color = Color( 0.882813, 0.779412, 0.534515, 1 )
+color = Color( 0.890625, 0.754292, 0.494019, 1 )
 energy = 1.0
 mode = 0
 range_height = 0.0
@@ -24,24 +26,107 @@ range_z_min = -1024
 range_z_max = 1024
 range_layer_min = 0
 range_layer_max = 0
-range_item_cull_mask = 1
+range_item_cull_mask = 3
 shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 0 )
 shadow_buffer_size = 2048
 shadow_gradient_length = 2.0
 shadow_filter = 1
 shadow_filter_smooth = 4.0
-shadow_item_cull_mask = 1
+shadow_item_cull_mask = 3
 script = ExtResource( 2 )
-_sections_unfolded = [ "Range", "Shadow", "Transform" ]
+_sections_unfolded = [ "Material", "Range", "Shadow", "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." index="0"]
 
+light_mask = 2
 occluder = SubResource( 1 )
-light_mask = 1
-_sections_unfolded = [ "Transform" ]
+light_mask = 2
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="PointLight" type="Light2D" parent="." index="1"]
+
+position = Vector2( -12.4646, -0.315559 )
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 0.5
+color = Color( 0.882353, 0.776471, 0.533333, 1 )
+energy = 1.2
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="BatteryStatus" type="ProgressBar" parent="CanvasLayer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 155.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 50.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Percent" ]
+
+[node name="Label" type="Label" parent="CanvasLayer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 158.0
+margin_top = 5.0
+margin_right = 204.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.746094, 0.746094, 0.746094, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Battery"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 

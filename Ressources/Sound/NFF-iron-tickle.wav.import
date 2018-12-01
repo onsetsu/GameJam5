@@ -7,10 +7,14 @@ path="res://.import/NFF-iron-tickle.wav-fe4752e71dbb87f488b47f1fc3e66997.sample"
 [deps]
 
 source_file="res://Ressources/Sound/NFF-iron-tickle.wav"
+<<<<<<< HEAD
 source_md5="e73c8e8123e10f28619f416050066158"
 
 dest_files=[ "res://.import/NFF-iron-tickle.wav-fe4752e71dbb87f488b47f1fc3e66997.sample" ]
 dest_md5="a30b1a1a132c70237d8cb5d59b08c674"
+=======
+dest_files=[ "res://.import/NFF-iron-tickle.wav-fe4752e71dbb87f488b47f1fc3e66997.sample" ]
+>>>>>>> 5d3283ec27b695f134aead2815d87528dbd855a5
 
 [params]
 
