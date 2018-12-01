@@ -3,7 +3,7 @@ extends Light2D
 var maxBattery = 5
 var battery
 var batteryRechargingFactor = 1.25
-var batteryRechargeDelay = 1.5
+var batteryRechargeDelay = 0.4
 var timeToRecharge
 
 func _ready():

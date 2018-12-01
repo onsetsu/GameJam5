@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/Enemy/idle.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/Enemy/chasing.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Enemy/searching.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/waiting.gd" type="Script" id=5]
-[ext_resource path="res://Animations/zombieDarkSkin.png" type="Texture" id=6]
+[ext_resource path="res://Ressources/Sound/NFF-bad-whistle.wav" type="AudioStream" id=2]
+[ext_resource path="res://Scripts/Enemy/idle.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Enemy/chasing.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Enemy/searching.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/waiting.gd" type="Script" id=6]
+[ext_resource path="res://Animations/zombieDarkSkin.png" type="Texture" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -55,7 +56,7 @@ custom_solver_bias = 0.0
 radius = 34.7531
 height = 1.30029
 
-[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 8
@@ -70,26 +71,37 @@ speed = 70
 scale = Vector2( 3.44411, 3.44411 )
 shape = SubResource( 1 )
 
-[node name="States" type="Node" parent="." index="1"]
+[node name="ChasingSoundPlayer" type="AudioStreamPlayer2D" parent="." index="1"]
+
+stream = ExtResource( 2 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="States" type="Node" parent="." index="2"]
 
 [node name="idle" type="Node" parent="States" index="0"]
 
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 idle_path_time = 4
 
 [node name="chasing" type="Node" parent="States" index="1"]
 
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="searching" type="Node" parent="States" index="2"]
 
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="waiting" type="Node" parent="States" index="3"]
 
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
-[node name="rotation" type="Node2D" parent="." index="2"]
+[node name="rotation" type="Node2D" parent="." index="3"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -97,7 +109,7 @@ _sections_unfolded = [ "Transform" ]
 
 rotation = 1.5708
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 vframes = 6
 hframes = 5
 region_rect = Rect2( 0, 0, 0, 209 )
@@ -114,7 +126,7 @@ anims/standing = SubResource( 2 )
 anims/walking = SubResource( 3 )
 blend_times = [  ]
 
-[node name="range_area" type="Area2D" parent="." index="3"]
+[node name="range_area" type="Area2D" parent="." index="4"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

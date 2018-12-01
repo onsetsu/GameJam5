@@ -55,18 +55,19 @@ func is_pickup_type(type):
     return type == 'bump' || type == 'basic'
 
 func _sound_emitted(pos, type):
-    
-    if current_state == $States/chasing: return
-    if is_pickup_type(type) && (position - pos).length() > 500: return
-    if type == 'step' && (position - (pos + (-direction * 70))).length() > 140: return
-    
-    $States/searching.target_pos = pos
-    if type == 'step':
-        _change_state('chasing')
-    else: if is_pickup_type(type):
-        _change_state('searching')
+	
+	if current_state == $States/chasing: return
+	if is_pickup_type(type) && (position - pos).length() > 500: return
+	if type == 'step' && (position - (pos + (-direction * 70))).length() > 140: return
+	
+	$States/searching.target_pos = pos
+	if type == 'step':
+		$ChasingSoundPlayer.play()
+		_change_state('chasing')
+	else: if is_pickup_type(type):
+		_change_state('searching')
 
 func _on_range_area_body_entered(body):
-    if body.is_in_group('player'):
-        get_tree().reload_current_scene()
-        print('YOU DIED')
+	if body.is_in_group('player'):
+		get_tree().reload_current_scene()
+		print('YOU DIED')
