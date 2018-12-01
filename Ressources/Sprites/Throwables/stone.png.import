@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/muddySomething.png-b8d37aa1a393830914986ad7666c30d3.stex"
+path="res://.import/stone.png-57a1002fb90f594eb7ba689dae9db404.stex"
 
 [deps]
 
-source_file="res://Ressources/Sprites/Background/muddySomething.png"
-source_md5="e21bfdcf3d4b5882a4f3cb03d44f646b"
+source_file="res://Ressources/Sprites/Throwables/stone.png"
+source_md5="18c146ac4a0e6d681cd2ceafafe951de"
 
-dest_files=[ "res://.import/muddySomething.png-b8d37aa1a393830914986ad7666c30d3.stex" ]
-dest_md5="a9f2eb22f26d520917f74e9dadf1eddb"
+dest_files=[ "res://.import/stone.png-57a1002fb90f594eb7ba689dae9db404.stex" ]
+dest_md5="e4696cb5fa467361ceeed734727313d2"
 
 [params]
 

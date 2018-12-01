@@ -3,16 +3,18 @@ extends RigidBody2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var throwImpulse = 500
+var throwImpulse = 1000
 var shouldEmitBasicSound = false
 
 func _ready():
 	self.set_max_contacts_reported(1)
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	pass
+	#var minScale = 0.4
+	#var maxScale = 0.6
+	#var scale = clamp((get_linear_velocity().length() / 1000) + minScale, minScale, maxScale)
+	#$Sprite.set_scale(Vector2(scale,scale))
 
 
 func _on_PickupArea_body_entered(body):

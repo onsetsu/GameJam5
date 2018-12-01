@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 # class member variables go here, for example:
 var velocity = Vector2(0, 0);
-var speed = 100;
-var maxSpeed = 100
+var speed = 300;
+var maxSpeed = 200
 var stepTime = 0.5
 var stepTimer = 0.5
 var stepVelocity = 1
@@ -17,6 +17,10 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+func process_flashlight(delta):
+	$camera.set_position(Vector2(300, 0) if $Flashlight.is_activated() else Vector2(0,0))
+
 
 func process_movement_input(delta):
 	var direction = Vector2(0,0)
@@ -69,6 +73,7 @@ func emit_step_sounds(delta):
 func _physics_process(delta):
 	process_input(delta)
 	rotate_toward_mouse()
+	process_flashlight(delta)
 	emit_step_sounds(delta)
 	velocity = self.move_and_slide(velocity)
 
