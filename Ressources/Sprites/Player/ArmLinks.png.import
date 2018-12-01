@@ -7,7 +7,10 @@ path="res://.import/ArmLinks.png-a4874f5377a4021a58c3829f18eb08d9.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/ArmLinks.png"
+source_md5="6b0729815251e32ad1ceaa3918a7a010"
+
 dest_files=[ "res://.import/ArmLinks.png-a4874f5377a4021a58c3829f18eb08d9.stex" ]
+dest_md5="4e72b1b60988cc3d4f250709edbbac16"
 
 [params]
 

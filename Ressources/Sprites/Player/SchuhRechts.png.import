@@ -7,7 +7,10 @@ path="res://.import/SchuhRechts.png-621552ab284835c2a797ae0d1505b57c.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/SchuhRechts.png"
+source_md5="00e8e3f3c5eaf2adeb0a1f9c9d637513"
+
 dest_files=[ "res://.import/SchuhRechts.png-621552ab284835c2a797ae0d1505b57c.stex" ]
+dest_md5="2bfd04a1a77339dc11d11b52c84216ab"
 
 [params]
 

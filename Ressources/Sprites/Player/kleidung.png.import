@@ -7,7 +7,10 @@ path="res://.import/kleidung.png-56c1ae0dcde12fb83c8483790f6b1cee.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Player/kleidung.png"
+source_md5="f3759c4a5d2c54e165378dddb3ad4acf"
+
 dest_files=[ "res://.import/kleidung.png-56c1ae0dcde12fb83c8483790f6b1cee.stex" ]
+dest_md5="3d4fdcd68aa4379470c7bf3b700ed96a"
 
 [params]
 
