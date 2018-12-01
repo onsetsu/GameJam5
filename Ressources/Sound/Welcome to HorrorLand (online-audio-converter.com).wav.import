@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Welcome to HorrorLand (online-audio-converter.com).wav-00c0b28671877bbee5dd90fa9fa52a32.sample"
+
+[deps]
+
+source_file="res://Ressources/Sound/Welcome to HorrorLand (online-audio-converter.com).wav"
+dest_files=[ "res://.import/Welcome to HorrorLand (online-audio-converter.com).wav-00c0b28671877bbee5dd90fa9fa52a32.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/NFF-thud.wav-6e670b8f672200433a434a0af10be91b.sample"
+
+[deps]
+
+source_file="res://Ressources/Sound/NFF-thud.wav"
+dest_files=[ "res://.import/NFF-thud.wav-6e670b8f672200433a434a0af10be91b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

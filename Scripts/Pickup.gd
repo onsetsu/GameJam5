@@ -61,4 +61,5 @@ func thrown_by(player, direction):
 	$PickupArea.set_monitoring(true)
 
 func _on_Pickup_body_entered(body):
+	$BumpSoundPlayer.play()
 	emit_sound('bump')
