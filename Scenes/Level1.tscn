@@ -62,7 +62,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 125.561, 422.007, 0, 0, 0, 0, 392.05, 416.455, 0, 0, 0, 0, 401.303, 205.485, 0, 0, 0, 0, 110.756, 201.784 )
 }
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -478,7 +478,7 @@ shape = SubResource( 8 )
 
 [node name="Player" parent="." index="11" instance=ExtResource( 4 )]
 
-position = Vector2( 1348.27, 146.725 )
+position = Vector2( 263.531, 136.472 )
 
 [node name="Enemy" parent="." index="12" instance=ExtResource( 5 )]
 

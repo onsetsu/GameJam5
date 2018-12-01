@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Enemy/idle.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scripts/Enemy/searching.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/waiting.gd" type="Script" id=5]
 [ext_resource path="res://Animations/zombieDarkSkin.png" type="Texture" id=6]
+[ext_resource path="res://icon.png" type="Texture" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -91,6 +92,8 @@ script = ExtResource( 5 )
 
 [node name="rotation" type="Node2D" parent="." index="2"]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="Zombie" type="Sprite" parent="rotation" index="0"]
 
 rotation = 1.5708
@@ -111,6 +114,18 @@ playback_speed = 1.0
 anims/standing = SubResource( 2 )
 anims/walking = SubResource( 3 )
 blend_times = [  ]
+
+[node name="ears" type="Node2D" parent="rotation/Zombie" index="1"]
+
+position = Vector2( 0, -200 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="rotation/Zombie/ears" index="0"]
+
+rotation = -1.5708
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="range_area" type="Area2D" parent="." index="3"]
 

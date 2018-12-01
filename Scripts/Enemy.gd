@@ -10,6 +10,7 @@ onready var states_map = {
     'searching': $States/searching,
     'waiting': $States/waiting
 }
+var direction = Vector2(0,-1)
 
 export(NodePath) var idle_path_init = null
 export var speed = 70
@@ -24,7 +25,7 @@ func _ready():
 
 func navigate_to_point(p):
     var path = nav_map.get_simple_path(position, p)
-    var direction = (path[1] - position).normalized()
+    direction = (path[1] - position).normalized()
     $rotation.rotation = direction.angle()
     move_and_slide(direction * speed * current_state.speed_modifier)
 
@@ -39,6 +40,8 @@ func length_to_point(p):
     
 func _physics_process(delta):
     # state machine
+    
+    
     var state_name = current_state.update(self, delta)
     if state_name:
         _change_state(state_name)
@@ -48,11 +51,20 @@ func _change_state(state_name):
     current_state = states_map[state_name]
     current_state.enter(self)
 
+func is_pickup_type(type):
+    return type == 'bump' || type == 'basic'
+
 func _sound_emitted(pos, type):
-    if (position - pos).length() > 500: return
-    print(length_to_point(pos))
+    
+    if current_state == $States/chasing: return
+    if is_pickup_type(type) && (position - pos).length() > 500: return
+    if type == 'step' && (position - (pos + (-direction * 100))).length() > 200: return
+    
     $States/searching.target_pos = pos
-    _change_state('searching')
+    if type == 'step':
+        _change_state('chasing')
+    else: if is_pickup_type(type):
+        _change_state('searching')
 
 func _on_range_area_body_entered(body):
     if body.is_in_group('player'):
