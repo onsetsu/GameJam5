@@ -7,10 +7,7 @@ path="res://.import/NFF-death-bell.wav-3246dab41571af96f9a1ba2a03985256.sample"
 [deps]
 
 source_file="res://Ressources/Sound/NFF-death-bell.wav"
-source_md5="01a337f0d0373916b93667cf0f9d60c5"
-
 dest_files=[ "res://.import/NFF-death-bell.wav-3246dab41571af96f9a1ba2a03985256.sample" ]
-dest_md5="47184005ff0aa08f197c5cfc772d000a"
 
 [params]
 

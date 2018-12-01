@@ -7,10 +7,7 @@ path="res://.import/Kleidung.png-87423b1b679c219177e4246bca576808.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombieDarkSkin/Kleidung.png"
-source_md5="97161ece54ba34146436f0fc690bda75"
-
 dest_files=[ "res://.import/Kleidung.png-87423b1b679c219177e4246bca576808.stex" ]
-dest_md5="63ccb3a205574128fb277356897b3edd"
 
 [params]
 

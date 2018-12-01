@@ -7,10 +7,7 @@ path="res://.import/wallBelow.png-04177c6e67f3fb53444548dddf298386.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Wall/wallBelow.png"
-source_md5="c5df16e6c15fd2565e50ec5d4ef84ec0"
-
 dest_files=[ "res://.import/wallBelow.png-04177c6e67f3fb53444548dddf298386.stex" ]
-dest_md5="c98ee9521d129010bef9ff1ae430c326"
 
 [params]
 

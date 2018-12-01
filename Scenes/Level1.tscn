@@ -6,8 +6,8 @@
 [ext_resource path="res://Scripts/nav_map.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Pickup.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/JustLight.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/JustLight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/EndingArea.tscn" type="PackedScene" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -22,7 +22,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 175.136, 334.21, 0, 0, 0, 0, 821.774, 316.581 )
 }
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -82,59 +82,47 @@ scale = Vector2( 1.04945, 0.987654 )
 curve = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Enemy3" parent="." index="6" instance=ExtResource( 6 )]
-
-position = Vector2( 1352.44, 259.541 )
-
-[node name="Pickup" parent="." index="7" instance=ExtResource( 7 )]
-
-position = Vector2( 1386.49, 651.417 )
-
-[node name="Pickup2" parent="." index="8" instance=ExtResource( 7 )]
-
-position = Vector2( 1507.63, 141.645 )
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="9"]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
 
 color = Color( 0.0351563, 0.0296631, 0.0296631, 0.966863 )
 
-[node name="Node2D" parent="." index="10" instance=ExtResource( 8 )]
+[node name="Node2D" parent="." index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 309.55, 968.668 )
 
-[node name="Node2D8" parent="." index="11" instance=ExtResource( 8 )]
+[node name="Node2D8" parent="." index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 408.55, 970.668 )
 
-[node name="Node2D9" parent="." index="12" instance=ExtResource( 8 )]
+[node name="Node2D9" parent="." index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 516.55, 973.668 )
 
-[node name="Node2D4" parent="." index="13" instance=ExtResource( 8 )]
+[node name="Node2D4" parent="." index="10" instance=ExtResource( 7 )]
 
 position = Vector2( 448.433, 773.809 )
 
-[node name="Node2D5" parent="." index="14" instance=ExtResource( 8 )]
+[node name="Node2D5" parent="." index="11" instance=ExtResource( 7 )]
 
 position = Vector2( 609.99, 1184.02 )
 
-[node name="Node2D6" parent="." index="15" instance=ExtResource( 8 )]
+[node name="Node2D6" parent="." index="12" instance=ExtResource( 7 )]
 
 position = Vector2( 315.516, 323.087 )
 
-[node name="Node2D2" parent="." index="16" instance=ExtResource( 8 )]
+[node name="Node2D2" parent="." index="13" instance=ExtResource( 7 )]
 
 position = Vector2( 157.916, 1184.03 )
 
-[node name="Node2D3" parent="." index="17" instance=ExtResource( 8 )]
+[node name="Node2D3" parent="." index="14" instance=ExtResource( 7 )]
 
 position = Vector2( 700.734, 321.434 )
 
-[node name="Node2D7" parent="." index="18" instance=ExtResource( 8 )]
+[node name="Node2D7" parent="." index="15" instance=ExtResource( 7 )]
 
 position = Vector2( 1150.41, 740.866 )
 
-[node name="Help text" type="Label" parent="." index="19"]
+[node name="Help text" type="Label" parent="." index="16"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -159,7 +147,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Rect", "Size Flags", "Visibility", "custom_colors" ]
 
-[node name="Well done" type="Label" parent="." index="20"]
+[node name="Well done" type="Label" parent="." index="17"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -183,5 +171,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Rect", "Size Flags", "Visibility", "custom_colors" ]
+
+[node name="EndingArea" parent="." index="18" instance=ExtResource( 8 )]
+
+position = Vector2( 1410.63, 644.925 )
+nextLevel = 2
 
 

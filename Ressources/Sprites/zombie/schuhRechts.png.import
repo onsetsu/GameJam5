@@ -7,10 +7,7 @@ path="res://.import/schuhRechts.png-c7ade62f1affdb3ef4f604925b728532.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombie/schuhRechts.png"
-source_md5="6e1b21f33e0d5438bef0e8c4b0c7144a"
-
 dest_files=[ "res://.import/schuhRechts.png-c7ade62f1affdb3ef4f604925b728532.stex" ]
-dest_md5="3fa10b80058aabd93d441be27758e7f2"
 
 [params]
 

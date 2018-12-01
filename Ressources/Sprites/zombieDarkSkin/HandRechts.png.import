@@ -7,10 +7,7 @@ path="res://.import/HandRechts.png-d6bfa422be697777ccf125c0c581b965.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/zombieDarkSkin/HandRechts.png"
-source_md5="b0e6a5a0acc7e299534c724b7a968666"
-
 dest_files=[ "res://.import/HandRechts.png-d6bfa422be697777ccf125c0c581b965.stex" ]
-dest_md5="e2a722c75502657e9c8b7397ab954458"
 
 [params]
 

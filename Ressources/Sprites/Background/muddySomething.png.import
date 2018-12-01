@@ -7,10 +7,7 @@ path="res://.import/muddySomething.png-b8d37aa1a393830914986ad7666c30d3.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Background/muddySomething.png"
-source_md5="e21bfdcf3d4b5882a4f3cb03d44f646b"
-
 dest_files=[ "res://.import/muddySomething.png-b8d37aa1a393830914986ad7666c30d3.stex" ]
-dest_md5="a9f2eb22f26d520917f74e9dadf1eddb"
 
 [params]
 
