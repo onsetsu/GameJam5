@@ -53,10 +53,10 @@ func create_timer(seconds):
 	return timer
 
 func thrown_by(player, direction):
-	shouldEmitBasicSound = true
 	$PickupArea.set_monitoring(false)
 	self.apply_impulse(to_global(Vector2(0,0)), direction * throwImpulse)
 	set_collision(true)
+	shouldEmitBasicSound = true
 	
 	yield(create_timer(1), 'timeout')
 	$PickupArea.set_monitoring(true)
