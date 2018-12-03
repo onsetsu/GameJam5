@@ -24,7 +24,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 2260, 830, 0, 0, 0, 0, 2440, 820, 0, 0, 0, 0, 2620, 840 )
 }
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -90,6 +90,7 @@ idle_path_init = NodePath("../Enemy_Path")
 
 [node name="Enemy_Path" type="Path2D" parent="." index="7"]
 
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 curve = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
@@ -111,7 +112,7 @@ position = Vector2( 1159.28, 1242.15 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="12"]
 
-color = Color( 0.0351563, 0.0296631, 0.0296631, 0.966863 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="Node2D" parent="." index="13" instance=ExtResource( 9 )]
 

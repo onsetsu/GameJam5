@@ -74,7 +74,7 @@ curve = SubResource( 3 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="4"]
 
-color = Color( 0.0351563, 0.0296631, 0.0296631, 0.966863 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="Node2D8" parent="." index="5" instance=ExtResource( 4 )]
 
