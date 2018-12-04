@@ -7,14 +7,10 @@ path="res://.import/goal.png-92c760ab9310f1eb4997d9cb2138e2be.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/EnvironmentalElements/goal.png"
-<<<<<<< HEAD
 source_md5="445d0a91f04624a51fae5c8ceecbb56e"
 
 dest_files=[ "res://.import/goal.png-92c760ab9310f1eb4997d9cb2138e2be.stex" ]
 dest_md5="c0bb6f866769a285cc93c44e26e6ec38"
-=======
-dest_files=[ "res://.import/goal.png-92c760ab9310f1eb4997d9cb2138e2be.stex" ]
->>>>>>> eb0d5b8709b1e42feb3de5b9aae9e25393b22120
 
 [params]
 

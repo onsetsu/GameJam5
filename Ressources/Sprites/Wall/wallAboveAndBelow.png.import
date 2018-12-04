@@ -7,14 +7,10 @@ path="res://.import/wallAboveAndBelow.png-4a624fc480d691d227cdab2015f52d92.stex"
 [deps]
 
 source_file="res://Ressources/Sprites/Wall/wallAboveAndBelow.png"
-<<<<<<< HEAD
 source_md5="feb2da89f98a4ae4523145b77d446cda"
 
 dest_files=[ "res://.import/wallAboveAndBelow.png-4a624fc480d691d227cdab2015f52d92.stex" ]
 dest_md5="60916c67bdd23353a909ba35d3fbe186"
-=======
-dest_files=[ "res://.import/wallAboveAndBelow.png-4a624fc480d691d227cdab2015f52d92.stex" ]
->>>>>>> eaf24956a394feeb1ab5f9fa6cd295eddb7641f3
 
 [params]
 
